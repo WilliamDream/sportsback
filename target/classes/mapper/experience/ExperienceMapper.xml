@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.letansuo.sportsback.biz.experience.mapper.ExperienceMapper" >
+    <resultMap id="BaseResultMap" type="com.letansuo.sportsback.biz.experience.model.Experience" >
+        <id column="experienceId" property="experienceid" jdbcType="INTEGER" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="typeId" property="typeid" jdbcType="INTEGER" />
+        <result column="clubId" property="clubid" jdbcType="INTEGER" />
+        <result column="operatorId" property="operatorid" jdbcType="INTEGER" />
+        <result column="price" property="price" jdbcType="DECIMAL" />
+        <result column="special_price" property="specialPrice" jdbcType="DECIMAL" />
+        <result column="bottom_price" property="bottomPrice" jdbcType="DECIMAL" />
+        <result column="group_price" property="groupPrice" jdbcType="DECIMAL" />
+        <result column="price_flag" property="priceFlag" jdbcType="TINYINT" />
+        <result column="age" property="age" jdbcType="VARCHAR" />
+        <result column="address" property="address" jdbcType="VARCHAR" />
+        <result column="lng" property="lng" jdbcType="VARCHAR" />
+        <result column="lat" property="lat" jdbcType="VARCHAR" />
+        <result column="status" property="status" jdbcType="TINYINT" />
+        <result column="flag" property="flag" jdbcType="TINYINT" />
+        <result column="teacher" property="teacher" jdbcType="VARCHAR" />
+        <result column="phone" property="phone" jdbcType="VARCHAR" />
+        <result column="stu_number" property="stuNumber" jdbcType="INTEGER" />
+        <result column="startDate" property="startDate" jdbcType="VARCHAR" />
+        <result column="endDate" property="endDate" jdbcType="VARCHAR" />
+        <result column="createtime" property="createtime" jdbcType="VARCHAR" />
+        <result column="descrite" property="descrite" jdbcType="LONGVARCHAR" />
+    </resultMap>
+
+    <parameterMap id="Exprience" type="com.letansuo.sportsback.biz.experience.model.Experience"/>
+
+    <sql id="where_all">
+        <if test="experienceid != null and experienceid !=''">
+            and experienceid = #{experienceid}
+        </if>
+        <if test="typeid != null and typeid !=''">
+            and typeid = #{typeid}
+        </if>
+        <if test="clubid != null and clubid !=''">
+            and clubid = #{clubid}
+        </if>
+        <if test="status != null and status !=''">
+            and status = #{status}
+        </if>
+        <if test="createStart != null and createStart !=''">
+            and createtime &gt; #{createStart}
+        </if>
+        <if test="createEnd != null and createEnd !=''">
+            and createtime &lt; #{createEnd}
+        </if>
+
+    </sql>
+
+    <select id="selectExpricence" parameterMap="Exprience" resultMap="BaseResultMap" >
+        select experienceId, name, typeId, clubId, operatorId, price, special_price, bottom_price,
+        group_price, price_flag, age, address, status, flag, teacher, phone, stu_number, createtime,
+        descrite
+        from d_experience
+        <include refid="where_all"/>
+        ORDER BY typeId, createtime
+    </select>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select experienceId, name, typeId, clubId, operatorId, price, special_price, bottom_price,
+        group_price, price_flag, age, address, status, flag, teacher, phone, stu_number, createtime,
+        descrite
+        from d_experience
+        where experienceId = #{experienceid,jdbcType=INTEGER}
+    </select>
+
+    <insert id="insert" parameterMap="Exprience" useGeneratedKeys="true" keyProperty="experienceId" >
+        insert into d_experience (name, typeId, clubId,
+        operatorId, price, special_price,
+        bottom_price, group_price, price_flag,
+        age, address, lng, lat, status,
+        flag, teacher, phone, startDate, endDate,
+        stu_number, createtime, descrite
+        )
+        values (#{name,jdbcType=VARCHAR}, #{typeid,jdbcType=INTEGER}, #{clubid,jdbcType=INTEGER},
+        #{operatorid,jdbcType=INTEGER}, #{price,jdbcType=DECIMAL}, #{specialPrice,jdbcType=DECIMAL},
+        #{bottomPrice,jdbcType=DECIMAL}, #{groupPrice,jdbcType=DECIMAL}, #{priceFlag,jdbcType=TINYINT},
+        #{age,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT}, #{lng,jdbcType=VARCHAR}, #{lat,jdbcType=VARCHAR},
+        #{flag,jdbcType=TINYINT}, #{teacher,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{startDate,jdbcType=VARCHAR}, #{endDate,jdbcType=VARCHAR},
+        #{stuNumber,jdbcType=INTEGER}, #{createtime,jdbcType=VARCHAR}, #{descrite,jdbcType=LONGVARCHAR}
+        )
+    </insert>
+
+    <update id="updateByPrimaryKey" parameterMap="Exprience" >
+        update d_experience
+        <trim prefix="set" suffixOverrides=",">
+            <if test="name != null and name !=''">
+                name = #{name},
+            </if>
+            <if test="typeId != null and typeId !=''">
+                typeId = #{typeId},
+            </if>
+            <if test="clubId != null and clubId !=''">
+                clubId = #{clubId},
+            </if>
+            <if test="operatorId != null and operatorId !=''">
+                operatorId = #{operatorId},
+            </if>
+            <if test="price != null and price !=''">
+                price = #{price},
+            </if>
+            <if test="specialPrice != null and specialPrice !=''">
+                special_price = #{specialPrice},
+            </if>
+            <if test="bottomPrice != null and bottomPrice !=''">
+                bottom_price = #{bottomPrice},
+            </if>
+            <if test="groupPrice != null and groupPrice !=''">
+                group_price = #{groupPrice},
+            </if>
+            <if test="age != null and age !=''">
+                age = #{age},
+            </if>
+            <if test="address != null and address !=''">
+                address = #{address},
+            </if>
+            <if test="lng != null and lng !=''">
+                lng = #{lng},
+            </if>
+            <if test="lat != null and lat !=''">
+                lat = #{lat},
+            </if>
+            <if test="status != null and status !=''">
+                status = #{status},
+            </if>
+            <if test="flag != null and flag !=''">
+                flag = #{flag},
+            </if>
+            <if test="teacher != null and teacher !=''">
+                teacher = #{teacher},
+            </if>
+            <if test="phone != null and phone !=''">
+                phone = #{phone},
+            </if>
+            <if test="stuNumber != null and stuNumber !=''">
+                stu_number = #{stuNumber},
+            </if>
+            <if test="startDate != null and startDate !=''">
+                startDate = #{startDate},
+            </if>
+            <if test="endDate != null and endDate !=''">
+                endDate = #{endDate},
+            </if>
+            <if test="createtime != null and createtime !=''">
+                createtime = #{createtime},
+            </if>
+            <if test="descrite != null and descrite !=''">
+                descrite = #{descrite},
+            </if>
+
+        </trim>
+        where experienceId = #{experienceid,jdbcType=INTEGER}
+    </update>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+        delete from d_experience
+        where experienceId = #{experienceid,jdbcType=INTEGER}
+    </delete>
+
+</mapper>
