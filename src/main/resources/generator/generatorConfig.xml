@@ -26,17 +26,17 @@
                         password="${spring.datasource.password}">
         </jdbcConnection>
 
-        <javaModelGenerator targetPackage="com.letansuo.sportsback.biz.classes.model" targetProject="src/main/java"/>
+        <javaModelGenerator targetPackage="com.letansuo.sportsback.biz.minisetup.model" targetProject="src/main/java"/>
 
         <!-- xml -->
-        <sqlMapGenerator targetPackage="mapper.classes" targetProject="src/main/resources"/>
+        <sqlMapGenerator targetPackage="mapper.minisetup" targetProject="src/main/resources"/>
 
-        <javaClientGenerator targetPackage="com.letansuo.sportsback.biz.classes.mapper" targetProject="src/main/java"
+        <javaClientGenerator targetPackage="com.letansuo.sportsback.biz.minisetup.mapper" targetProject="src/main/java"
                              type="XMLMAPPER"/>
 
-        <table tableName="d_class" domainObjectName="Class">
+        <table tableName="d_classimg" domainObjectName="ClassImg">
             <!--mysql éç½®-->
-            <generatedKey column="classId" sqlStatement="JDBC" identity="true"/>
+            <generatedKey column="imgId" sqlStatement="JDBC" identity="true"/>
             <!--oracle éç½®-->
             <!--<generatedKey column="id" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/>-->
         </table>

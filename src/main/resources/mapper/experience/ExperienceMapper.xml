@@ -88,71 +88,71 @@
     <update id="updateByPrimaryKey" parameterMap="Exprience" >
         update d_experience
         <trim prefix="set" suffixOverrides=",">
-            <if test="name != null and name !=''">
-                name = #{name},
-            </if>
-            <if test="typeId != null and typeId !=''">
-                typeId = #{typeId},
-            </if>
-            <if test="clubId != null and clubId !=''">
-                clubId = #{clubId},
-            </if>
-            <if test="operatorId != null and operatorId !=''">
-                operatorId = #{operatorId},
-            </if>
-            <if test="price != null and price !=''">
-                price = #{price},
-            </if>
-            <if test="specialPrice != null and specialPrice !=''">
-                special_price = #{specialPrice},
-            </if>
-            <if test="bottomPrice != null and bottomPrice !=''">
-                bottom_price = #{bottomPrice},
-            </if>
-            <if test="groupPrice != null and groupPrice !=''">
-                group_price = #{groupPrice},
-            </if>
-            <if test="age != null and age !=''">
-                age = #{age},
-            </if>
-            <if test="address != null and address !=''">
-                address = #{address},
-            </if>
-            <if test="lng != null and lng !=''">
-                lng = #{lng},
-            </if>
-            <if test="lat != null and lat !=''">
-                lat = #{lat},
-            </if>
-            <if test="status != null and status !=''">
-                status = #{status},
-            </if>
-            <if test="flag != null and flag !=''">
-                flag = #{flag},
-            </if>
-            <if test="teacher != null and teacher !=''">
-                teacher = #{teacher},
-            </if>
-            <if test="phone != null and phone !=''">
-                phone = #{phone},
-            </if>
-            <if test="stuNumber != null and stuNumber !=''">
-                stu_number = #{stuNumber},
-            </if>
-            <if test="startDate != null and startDate !=''">
-                startDate = #{startDate},
-            </if>
-            <if test="endDate != null and endDate !=''">
-                endDate = #{endDate},
-            </if>
-            <if test="createtime != null and createtime !=''">
-                createtime = #{createtime},
-            </if>
-            <if test="descrite != null and descrite !=''">
-                descrite = #{descrite},
-            </if>
+        <if test="name != null and name !=''">
+            name = #{name},
+        </if>
+        <if test="typeId != null and typeId !=''">
+            typeId = #{typeId},
+        </if>
+        <if test="clubId != null and clubId !=''">
+            clubId = #{clubId},
+        </if>
+        <if test="operatorId != null and operatorId !=''">
+            operatorId = #{operatorId},
+        </if>
+        <if test="price != null and price !=''">
+            price = #{price},
+        </if>
+        <if test="specialPrice != null and specialPrice !=''">
+            special_price = #{specialPrice},
+        </if>
+        <if test="bottomPrice != null and bottomPrice !=''">
+            bottom_price = #{bottomPrice},
+        </if>
+        <if test="groupPrice != null and groupPrice !=''">
+            group_price = #{groupPrice},
+        </if>
+        <if test="age != null and age !=''">
+            age = #{age},
+        </if>
+        <if test="address != null and address !=''">
+            address = #{address},
+        </if>
+        <if test="lng != null and lng !=''">
+            lng = #{lng},
+        </if>
+        <if test="lat != null and lat !=''">
+            lat = #{lat},
+        </if>
+        <if test="status != null and status !=''">
+            status = #{status},
+        </if>
+        <if test="flag != null and flag !=''">
+            flag = #{flag},
+        </if>
+        <if test="teacher != null and teacher !=''">
+            teacher = #{teacher},
+        </if>
+        <if test="phone != null and phone !=''">
+            phone = #{phone},
+        </if>
+        <if test="stuNumber != null and stuNumber !=''">
+            stu_number = #{stuNumber},
+        </if>
+        <if test="startDate != null and startDate !=''">
+            startDate = #{startDate},
+        </if>
+        <if test="endDate != null and endDate !=''">
+            endDate = #{endDate},
+        </if>
+        <if test="createtime != null and createtime !=''">
+            createtime = #{createtime},
+        </if>
+        <if test="descrite != null and descrite !=''">
+            descrite = #{descrite},
+        </if>
 
-        </trim>
+    </trim>
         where experienceId = #{experienceid,jdbcType=INTEGER}
     </update>
 

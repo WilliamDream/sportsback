@@ -5,15 +5,15 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-public abstract interface ExperienceMapper
+public  interface ExperienceMapper
 {
-  public abstract Experience selectByPrimaryKey(Integer paramInteger);
+  Experience selectByPrimaryKey(Integer paramInteger);
 
-  public abstract List<Experience> selectExpricence(Experience paramExperience);
+  List<Experience> selectExpricence(Experience paramExperience);
 
-  public abstract int insert(Experience paramExperience);
+  int insert(Experience paramExperience);
 
-  public abstract int updateByPrimaryKey(Experience paramExperience);
+  int updateByPrimaryKey(Experience paramExperience);
 
-  public abstract int deleteByPrimaryKey(Integer paramInteger);
+  int deleteByPrimaryKey(Integer paramInteger);
 }

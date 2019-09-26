@@ -3,14 +3,16 @@ package com.letansuo.sportsback.biz.experience.service;
 import com.github.pagehelper.PageInfo;
 import com.letansuo.sportsback.biz.experience.model.Experience;
 
-public abstract interface ExperienceService {
-  public abstract Experience selectByPrimaryKey(Integer paramInteger);
+public interface ExperienceService {
 
-  public abstract PageInfo<Experience> selectExpricence(Experience paramExperience);
+  Experience selectByPrimaryKey(Integer paramInteger);
 
-  public abstract int insert(Experience paramExperience);
+  PageInfo<Experience> selectExpricence(Experience paramExperience);
 
-  public abstract int updateByPrimaryKey(Experience paramExperience);
+  int insert(Experience paramExperience);
 
-  public abstract int deleteByPrimaryKey(Integer paramInteger);
+  int updateByPrimaryKey(Experience paramExperience);
+
+  int deleteByPrimaryKey(Integer paramInteger);
+
 }
