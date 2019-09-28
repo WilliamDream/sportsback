@@ -13,7 +13,7 @@ public class Club extends BaseEntity
   private String address;
   private String lat;
   private String lng;
-  private String desc;
+  private String describe;
   private Integer vipflag;
 
   public Integer getClubid()
@@ -89,12 +89,12 @@ public class Club extends BaseEntity
     this.lng = lng;
   }
 
-  public String getDesc() {
-    return this.desc;
+  public String getDescribe() {
+    return describe;
   }
 
-  public void setDesc(String desc) {
-    this.desc = desc;
+  public void setDescribe(String describe) {
+    this.describe = describe;
   }
 
   public Integer getVipflag() {

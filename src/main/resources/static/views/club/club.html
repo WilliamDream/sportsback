@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>体育俱乐部管理</title>
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all">
+</head>
+<body>
+
+<table id="datatable" lay-filter="list"></table>
+
+<script src="../../layui/layui.js"></script>
+
+<script type="text/html" id="toolbar">
+    <div class="layui-btn-container">
+        <button class="layui-btn layui-btn-sm" lay-event="add">添加</button>
+        <button class="layui-btn layui-btn-sm" lay-event="delete">删除</button>
+        <button class="layui-btn layui-btn-sm" lay-event="update">编辑</button>
+    </div>
+</script>
+
+<script>
+    layui.use('table', function(){
+        var table = layui.table;
+
+        //第一个实例
+        table.render({
+            elem: '#datatable'
+            ,height: 312
+            // ,url: '/club/all' //数据接口
+            ,page: true //开启分页
+            ,cols: [[ //表头
+                {field: 'id', title: '序号', width:80, sort: true, fixed: 'center'}
+                ,{field: 'username', title: '俱乐部名', width:180, fixed: 'left'}
+                ,{field: 'sex', title: '负责人', width:80}
+                ,{field: 'city', title: '电话', width:80}
+                ,{field: 'sign', title: '微信', width: 100}
+                ,{field: 'experience', title: 'logo', width: 80}
+                ,{field: 'score', title: '地址', width: 180 }
+                ,{field: 'classify', title: 'VIP', width: 80}
+                ,{fixed: 'right', width:150, align:'center', toolbar: '#toolbar'}
+            ]]
+        });
+
+    });
+</script>
+</body>
+</html>

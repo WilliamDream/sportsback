@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.letansuo.sportsback.biz.club.mapper.CoachMapper" >
+  <resultMap id="BaseResultMap" type="com.letansuo.sportsback.biz.club.model.Coach" >
+    <result column="coachId" property="coachId" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="userId" property="userId" jdbcType="INTEGER" />
+    <result column="clubId" property="clubId" jdbcType="INTEGER" />
+    <result column="typeId" property="typeId" jdbcType="INTEGER" />
+    <result column="identified" property="identified" jdbcType="VARCHAR" />
+    <result column="level" property="level" jdbcType="INTEGER" />
+    <result column="position" property="position" jdbcType="TINYINT" />
+    <result column="describe" property="describe" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.letansuo.sportsback.biz.club.model.Coach" useGeneratedKeys="true" keyProperty="coachId" >
+    insert into d_coach (name, userId, clubId, 
+      typeId, identified, level, 
+      position, describe)
+    values (#{name,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, #{clubId,jdbcType=INTEGER}, 
+      #{typeId,jdbcType=INTEGER}, #{identified,jdbcType=VARCHAR}, #{level,jdbcType=INTEGER}, 
+      #{position,jdbcType=TINYINT}, #{describe,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select coachId, name, userId, clubId, typeId, identified, level, position, describe
+    from d_coach
+  </select>
+</mapper>

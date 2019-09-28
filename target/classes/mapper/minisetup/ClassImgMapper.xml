@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.letansuo.sportsback.biz.minisetup.mapper.ClassImgMapper" >
+  <resultMap id="BaseResultMap" type="com.letansuo.sportsback.biz.minisetup.model.ClassImg" >
+    <result column="imgId" property="imgid" jdbcType="INTEGER" />
+    <result column="flagId" property="flagid" jdbcType="INTEGER" />
+    <result column="typeId" property="typeid" jdbcType="INTEGER" />
+    <result column="clubId" property="clubid" jdbcType="INTEGER" />
+    <result column="classId" property="classid" jdbcType="INTEGER" />
+    <result column="img" property="img" jdbcType="VARCHAR" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="showStart" property="showstart" jdbcType="TIMESTAMP" />
+    <result column="showEnd" property="showend" jdbcType="TIMESTAMP" />
+    <result column="createtime" property="createtime" jdbcType="TIMESTAMP" />
+  </resultMap>
+
+  <parameterMap id="ClassImg" type="com.letansuo.sportsback.biz.minisetup.model.ClassImg"/>
+
+  <sql id="where_all">
+    <if test="flagid != null and flagid !=''">
+      and flagid = #{flagid}
+    </if>
+    <if test="typeid != null and typeid !=''">
+      and typeId = #{typeid}
+    </if>
+    <if test="clubid != null and clubid !=''">
+      and clubId = #{clubid}
+    </if>
+    <if test="classtype != null and classtype !=''">
+      and classtype = #{classtype}
+    </if>
+    <if test="classid != null and classid !=''">
+      and classid = #{classid}
+    </if>
+    <if test="showstart != null and showstart !=''">
+      and showStart = #{showstart}
+    </if>
+    <if test="showend != null and showend !=''">
+      and showEnd = #{showend}
+    </if>
+
+  </sql>
+
+  <select id="selectClassImg" parameterMap="ClassImg" resultMap="BaseResultMap" >
+    select imgId, flagId, typeId, clubId, classId, img, url, showStart, showEnd, createtime
+    from d_classimg
+    where 1=1
+    <include refid="where_all"></include>
+    ORDER BY flagId,createtime
+  </select>
+
+  <insert id="insert" parameterMap="ClassImg" useGeneratedKeys="true" keyProperty="imgid" >
+    insert into d_classimg (flagId, typeId, clubId,
+    classId, img, url,
+    showStart, showEnd, createtime
+    )
+    values (#{flagid,jdbcType=INTEGER}, #{typeid,jdbcType=INTEGER}, #{clubid,jdbcType=INTEGER},
+    #{classid,jdbcType=INTEGER}, #{img,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR},
+    #{showstart,jdbcType=TIMESTAMP}, #{showend,jdbcType=TIMESTAMP}, #{createtime,jdbcType=TIMESTAMP}
+    )
+  </insert>
+
+  <update id="updateByPrimaryKey" parameterMap="ClassImg" >
+    update d_classimg
+    <trim prefix="set" suffixOverrides=",">
+      <if test="flagid != null and flagid !=''">
+        flagid = #{flagid},
+      </if>
+      <if test="typeid != null and typeid !=''">
+        typeId = #{typeid},
+      </if>
+      <if test="clubid != null and clubid !=''">
+        clubId = #{clubid},
+      </if>
+      <if test="classtype != null and classtype !=''">
+        classtype = #{classtype},
+      </if>
+      <if test="classid != null and classid !=''">
+        classid = #{classid},
+      </if>
+      <if test="img != null and img !=''">
+        img = #{img},
+      </if>
+      <if test="url != null and url !=''">
+        url = #{url},
+      </if>
+      <if test="showstart != null and showstart !=''">
+        showStart = #{showstart},
+      </if>
+      <if test="showend != null and showend !=''">
+        showEnd = #{showend},
+      </if>
+      <if test="createtime != null and createtime !=''">
+        createtime = #{createtime},
+      </if>
+
+    </trim>
+    where imgId = #{imgid,jdbcType=INTEGER}
+  </update>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from d_classimg
+    where imgId = #{imgid,jdbcType=INTEGER}
+  </delete>
+
+</mapper>

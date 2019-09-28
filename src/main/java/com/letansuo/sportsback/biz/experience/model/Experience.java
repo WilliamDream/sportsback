@@ -1,238 +1,236 @@
 package com.letansuo.sportsback.biz.experience.model;
 
 import java.math.BigDecimal;
-import javax.persistence.Transient;
+import java.util.Date;
 
-public class Experience
-{
-  private Integer experienceid;
-  private String name;
-  private Integer typeid;
-  private Integer clubid;
-  private Integer operatorid;
-  private BigDecimal price;
-  private BigDecimal specialPrice;
-  private BigDecimal bottomPrice;
-  private BigDecimal groupPrice;
-  private Integer priceFlag;
-  private String age;
-  private String address;
-  private String lng;
-  private String lat;
-  private Integer status;
-  private Integer flag;
-  private String teacher;
-  private String phone;
-  private Integer stuNumber;
-  private String startDate;
-  private String endDate;
-  private String createtime;
-  private String descrite;
+public class Experience {
+    private Integer experienceId;
 
-  @Transient
-  private String createStart;
+    private String name;
 
-  @Transient
-  private String createEnd;
+    private Integer typeId;
 
-  public Integer getExperienceid()
-  {
-    return this.experienceid;
-  }
+    private Integer clubId;
 
-  public void setExperienceid(Integer experienceid) {
-    this.experienceid = experienceid;
-  }
+    private Integer operatorId;
 
-  public String getName() {
-    return this.name;
-  }
+    private BigDecimal price;
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    private BigDecimal specialPrice;
 
-  public Integer getTypeid() {
-    return this.typeid;
-  }
+    private BigDecimal bottomPrice;
 
-  public void setTypeid(Integer typeid) {
-    this.typeid = typeid;
-  }
+    private BigDecimal groupPrice;
 
-  public Integer getClubid() {
-    return this.clubid;
-  }
+    private Byte priceFlag;
 
-  public void setClubid(Integer clubid) {
-    this.clubid = clubid;
-  }
+    private String age;
 
-  public Integer getOperatorid() {
-    return this.operatorid;
-  }
+    private String address;
 
-  public void setOperatorid(Integer operatorid) {
-    this.operatorid = operatorid;
-  }
+    private String lng;
 
-  public BigDecimal getPrice() {
-    return this.price;
-  }
+    private String lat;
 
-  public void setPrice(BigDecimal price) {
-    this.price = price;
-  }
+    private Integer status;
 
-  public BigDecimal getSpecialPrice() {
-    return this.specialPrice;
-  }
+    private Integer flag;
 
-  public void setSpecialPrice(BigDecimal specialPrice) {
-    this.specialPrice = specialPrice;
-  }
+    private String teacher;
 
-  public BigDecimal getBottomPrice() {
-    return this.bottomPrice;
-  }
+    private String phone;
 
-  public void setBottomPrice(BigDecimal bottomPrice) {
-    this.bottomPrice = bottomPrice;
-  }
+    private Integer stuNumber;
 
-  public BigDecimal getGroupPrice() {
-    return this.groupPrice;
-  }
+    private String startDate;
 
-  public void setGroupPrice(BigDecimal groupPrice) {
-    this.groupPrice = groupPrice;
-  }
+    private String endDate;
 
-  public Integer getPriceFlag() {
-    return this.priceFlag;
-  }
+    private String createTime;
 
-  public void setPriceFlag(Integer priceFlag) {
-    this.priceFlag = priceFlag;
-  }
+    private String descrite;
 
-  public String getAge() {
-    return this.age;
-  }
+    public Integer getExperienceId() {
+        return experienceId;
+    }
 
-  public void setAge(String age) {
-    this.age = age;
-  }
+    public void setExperienceId(Integer experienceId) {
+        this.experienceId = experienceId;
+    }
 
-  public String getAddress() {
-    return this.address;
-  }
+    public String getName() {
+        return name;
+    }
 
-  public void setAddress(String address) {
-    this.address = address;
-  }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-  public Integer getStatus() {
-    return this.status;
-  }
+    public Integer getTypeId() {
+        return typeId;
+    }
 
-  public void setStatus(Integer status) {
-    this.status = status;
-  }
+    public void setTypeId(Integer typeId) {
+        this.typeId = typeId;
+    }
 
-  public Integer getFlag() {
-    return this.flag;
-  }
+    public Integer getClubId() {
+        return clubId;
+    }
 
-  public void setFlag(Integer flag) {
-    this.flag = flag;
-  }
+    public void setClubId(Integer clubId) {
+        this.clubId = clubId;
+    }
 
-  public String getTeacher() {
-    return this.teacher;
-  }
+    public Integer getOperatorId() {
+        return operatorId;
+    }
 
-  public void setTeacher(String teacher) {
-    this.teacher = teacher;
-  }
+    public void setOperatorId(Integer operatorId) {
+        this.operatorId = operatorId;
+    }
 
-  public String getPhone() {
-    return this.phone;
-  }
+    public BigDecimal getPrice() {
+        return price;
+    }
 
-  public void setPhone(String phone) {
-    this.phone = phone;
-  }
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
 
-  public Integer getStuNumber() {
-    return this.stuNumber;
-  }
+    public BigDecimal getSpecialPrice() {
+        return specialPrice;
+    }
 
-  public void setStuNumber(Integer count) {
-    this.stuNumber = count;
-  }
+    public void setSpecialPrice(BigDecimal specialPrice) {
+        this.specialPrice = specialPrice;
+    }
 
-  public String getCreatetime() {
-    return this.createtime;
-  }
+    public BigDecimal getBottomPrice() {
+        return bottomPrice;
+    }
 
-  public void setCreatetime(String createtime) {
-    this.createtime = createtime;
-  }
+    public void setBottomPrice(BigDecimal bottomPrice) {
+        this.bottomPrice = bottomPrice;
+    }
 
-  public String getDescrite() {
-    return this.descrite;
-  }
+    public BigDecimal getGroupPrice() {
+        return groupPrice;
+    }
 
-  public void setDescrite(String descrite) {
-    this.descrite = descrite;
-  }
+    public void setGroupPrice(BigDecimal groupPrice) {
+        this.groupPrice = groupPrice;
+    }
 
-  public String getLng() {
-    return this.lng;
-  }
+    public Byte getPriceFlag() {
+        return priceFlag;
+    }
 
-  public void setLng(String lng) {
-    this.lng = lng;
-  }
+    public void setPriceFlag(Byte priceFlag) {
+        this.priceFlag = priceFlag;
+    }
 
-  public String getLat() {
-    return this.lat;
-  }
+    public String getAge() {
+        return age;
+    }
 
-  public void setLat(String lat) {
-    this.lat = lat;
-  }
+    public void setAge(String age) {
+        this.age = age;
+    }
 
-  public String getStartDate() {
-    return this.startDate;
-  }
+    public String getAddress() {
+        return address;
+    }
 
-  public void setStartDate(String startDate) {
-    this.startDate = startDate;
-  }
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
-  public String getEndDate() {
-    return this.endDate;
-  }
+    public String getLng() {
+        return lng;
+    }
 
-  public void setEndDate(String endDate) {
-    this.endDate = endDate;
-  }
+    public void setLng(String lng) {
+        this.lng = lng;
+    }
 
-  public String getCreateStart() {
-    return this.createStart;
-  }
+    public String getLat() {
+        return lat;
+    }
 
-  public void setCreateStart(String createStart) {
-    this.createStart = createStart;
-  }
+    public void setLat(String lat) {
+        this.lat = lat;
+    }
 
-  public String getCreateEnd() {
-    return this.createEnd;
-  }
+    public Integer getStatus() {
+        return status;
+    }
 
-  public void setCreateEnd(String createEnd) {
-    this.createEnd = createEnd;
-  }
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    public Integer getFlag() {
+        return flag;
+    }
+
+    public void setFlag(Integer flag) {
+        this.flag = flag;
+    }
+
+    public String getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(String teacher) {
+        this.teacher = teacher;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public Integer getStuNumber() {
+        return stuNumber;
+    }
+
+    public void setStuNumber(Integer stuNumber) {
+        this.stuNumber = stuNumber;
+    }
+
+    public String getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
+    }
+
+    public String getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+    }
+
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    public String getDescrite() {
+        return descrite;
+    }
+
+    public void setDescrite(String descrite) {
+        this.descrite = descrite;
+    }
 }

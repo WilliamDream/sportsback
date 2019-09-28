@@ -4,30 +4,26 @@ import com.letansuo.sportsback.common.vo.BaseEntity;
 
 public class SportClassify extends BaseEntity
 {
-  private Integer typeid;
-  private String typename;
+  private Integer typeId;
+  private String typeName;
   private Integer sort;
   private String content;
   private String image;
 
-  public Integer getTypeid()
-  {
-    return this.typeid;
+  public Integer getTypeId() {
+    return typeId;
   }
 
-  public void setTypeid(Integer typeid)
-  {
-    this.typeid = typeid;
+  public void setTypeId(Integer typeId) {
+    this.typeId = typeId;
   }
 
-  public String getTypename()
-  {
-    return this.typename;
+  public String getTypeName() {
+    return typeName;
   }
 
-  public void setTypename(String typename)
-  {
-    this.typename = typename;
+  public void setTypeName(String typeName) {
+    this.typeName = typeName;
   }
 
   public Integer getSort()
