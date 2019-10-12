@@ -1,5 +1,6 @@
 package com.letansuo.sportsback.biz.club.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.PageInfo;
 import com.letansuo.sportsback.biz.club.model.Club;
 import com.letansuo.sportsback.biz.club.service.ClubService;
@@ -11,6 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @RequestMapping({"/club"})
 @RestController
@@ -24,7 +28,7 @@ public class ClubController
     public ResultVo selectSportClassify(Club club)
     {
         PageInfo data = this.service.selectClub(club);
-        return ResultVo.success(data);
+        return ResultVo.success(data.getList());
     }
     @GetMapping({"/{clubid}"})
     public ResultVo select(@PathVariable("typeid") Integer clubid) {

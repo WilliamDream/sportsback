@@ -11,22 +11,21 @@
         <result column="address" property="address" jdbcType="VARCHAR" />
         <result column="lat" property="lat" jdbcType="VARCHAR" />
         <result column="lng" property="lng" jdbcType="VARCHAR" />
-        <result column="describe" property="describe" jdbcType="VARCHAR" />
+        <result column="content" property="content" jdbcType="VARCHAR" />
         <result column="vipFlag" property="vipflag" jdbcType="INTEGER" />
     </resultMap>
 
     <parameterMap id="Club" type="com.letansuo.sportsback.biz.club.model.Club"/>
 
     <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-        select clubId, clubName, clubIcon, charge, mobile, wechat, address, lat, lng, describe,
-        vipFlag
+        select clubId, clubName, clubIcon, charge, mobile, wechat, address, lat, lng, content, vipFlag
         from d_club
         where clubId = #{clubid,jdbcType=INTEGER}
     </select>
 
 
     <select id="selectClub" parameterMap="Club" resultMap="BaseResultMap" >
-        select clubId, clubName, clubIcon, charge, mobile, wechat, address, lat, lng, describe,
+        select clubId, clubName, clubIcon, charge, mobile, wechat, address, lat, lng, content,
         vipFlag
         from d_club
     </select>
@@ -34,10 +33,10 @@
 
     <insert id="insert" parameterMap="Club" useGeneratedKeys="true" keyProperty="clubid" >
         insert into d_club (clubName, clubIcon, charge, mobile, wechat, address,
-        lat, lng, describe, vipFlag )
+        lat, lng, content, vipFlag )
         values (#{clubname,jdbcType=VARCHAR}, #{clubicon,jdbcType=VARCHAR}, #{charge,jdbcType=VARCHAR},
         #{mobile,jdbcType=VARCHAR}, #{wechat,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR},
-        #{lat,jdbcType=VARCHAR}, #{lng,jdbcType=VARCHAR}, #{describe,jdbcType=VARCHAR}, #{vipflag,jdbcType=INTEGER}
+        #{lat,jdbcType=VARCHAR}, #{lng,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, #{vipflag,jdbcType=INTEGER}
         )
     </insert>
 
@@ -65,8 +64,8 @@
             <if test="lat != null and lat !=''">
                 lat = #{lat,jdbcType=VARCHAR},
             </if>
-            <if test="describe != null and describe !=''">
-                describe = #{describe,jdbcType=VARCHAR},
+            <if test="content != null and content !=''">
+                content = #{content,jdbcType=VARCHAR},
             </if>
             <if test="vipflag != null and vipflag !=''">
                 vipFlag = #{vipflag,jdbcType=INTEGER}

@@ -7,6 +7,7 @@ public class ResultVo
 {
     private Integer code;
     public Object data;
+    public Integer total;
     private ErrorInfo errorInfo;
 
     public Integer getCode()
