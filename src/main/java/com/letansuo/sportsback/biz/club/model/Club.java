@@ -11,6 +11,7 @@ public class Club extends BaseEntity
   private String mobile;
   private String wechat;
   private String address;
+  private String logo;
   private String lat;
   private String lng;
   private String describe;
@@ -103,5 +104,13 @@ public class Club extends BaseEntity
 
   public void setVipflag(Integer vipflag) {
     this.vipflag = vipflag;
+  }
+
+  public String getLogo() {
+    return logo;
+  }
+
+  public void setLogo(String logo) {
+    this.logo = logo;
   }
 }

@@ -2,128 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04c77483-baa1-4bfe-b582-de3c9ed22aec" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/css/login.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/layui.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/layui.mobile.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/code.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/laydate/default/laydate.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/layer/default/icon-ext.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/layer/default/icon.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/layer/default/layer.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/layer/default/loading-0.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/layer/default/loading-1.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/modules/layer/default/loading-2.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/font/iconfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/font/iconfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/font/iconfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/font/iconfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/font/iconfont.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/0.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/1.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/10.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/11.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/12.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/13.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/14.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/15.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/16.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/17.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/18.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/19.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/2.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/20.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/21.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/22.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/23.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/24.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/25.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/26.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/27.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/28.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/29.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/3.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/30.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/31.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/32.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/33.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/34.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/35.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/36.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/37.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/38.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/39.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/4.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/40.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/41.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/42.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/43.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/44.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/45.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/46.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/47.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/48.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/49.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/5.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/50.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/51.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/52.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/53.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/54.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/55.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/56.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/57.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/58.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/59.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/6.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/60.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/61.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/62.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/63.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/64.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/65.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/66.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/67.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/68.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/69.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/7.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/70.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/71.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/8.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/images/face/9.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/lay/modules/carousel.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/lay/modules/code.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/lay/modules/colorpicker.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/lay/modules/element.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/lay/modules/flow.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/lay/modules/form.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/lay/modules/jquery.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/lay/modules/laydate.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/lay/modules/layedit.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/lay/modules/layer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/lay/modules/laypage.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/lay/modules/laytpl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/lay/modules/mobile.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/lay/modules/rate.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/lay/modules/slider.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/lay/modules/table.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/lay/modules/transfer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/lay/modules/tree.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/lay/modules/upload.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/lay/modules/util.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/layui.all.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/layui.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/login.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/views/club/club.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/views/sports/sportsClassify.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/model/Club.java" afterPath="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/model/Club.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/experience/model/Experience.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/minisetup/controller/ClassImgController.java" afterPath="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/minisetup/controller/ClassImgController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/sports/model/SportClassify.java" afterPath="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/sports/model/SportClassify.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/generator/generatorConfig.xml" afterPath="$PROJECT_DIR$/src/main/resources/generator/generatorConfig.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/club/ClubMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/club/ClubMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/experience/ExperienceMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/experience/ExperienceMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/sports/SportClassifyMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/sports/SportClassifyMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/views/club/club.html" afterPath="$PROJECT_DIR$/src/main/resources/static/views/club/club.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/views/sports/sportsClassify.html" afterPath="$PROJECT_DIR$/src/main/resources/static/views/sports/sportsClassify.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/views/club/club.html" afterPath="$PROJECT_DIR$/target/classes/static/views/club/club.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/views/sports/sportsClassify.html" afterPath="$PROJECT_DIR$/target/classes/static/views/sports/sportsClassify.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -135,21 +20,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Club.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/model/Club.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="92" column="19" lean-forward="false" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="19" />
-              <folding>
-                <element signature="e#1629#1630#0" expanded="true" />
-                <element signature="e#1654#1655#0" expanded="true" />
-                <element signature="e#1700#1701#0" expanded="true" />
-                <element signature="e#1734#1735#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ClubMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/club/ClubMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -215,8 +85,8 @@
       <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+            <state relative-caret-position="300">
+              <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -232,21 +102,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sportsClassify.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sportsClassify.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/views/sports/sportsClassify.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="33" column="14" lean-forward="true" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+            <state relative-caret-position="191">
+              <caret line="39" column="11" lean-forward="true" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="club.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="club.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/views/club/club.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="143">
+              <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -255,8 +125,8 @@
       <file leaf-file-name="ClubController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/controller/ClubController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="23" />
+            <state relative-caret-position="250">
+              <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -311,7 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/sports/service/impl/SportClassifyServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/common/config/RequsetInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/sports/controller/SportClassifyController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/sports/SportClassifyController.java" />
@@ -336,7 +205,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/classes/service/impl/ClassesServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/service/impl/ClubServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/mapper/ClubMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/classes/controller/ClassesController.java" />
         <option value="$PROJECT_DIR$/Readme.md" />
         <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/minisetup/controller/CommonSetController.java" />
@@ -356,12 +224,14 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/css/login.css" />
         <option value="$PROJECT_DIR$/src/main/resources/static/views/login.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/login.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/model/Club.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/club/ClubMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/views/club/club.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/sports/model/SportClassify.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/sports/SportClassifyMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/static/views/sports/sportsClassify.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/club/club.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/model/Club.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/views/club/club.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -451,132 +321,7 @@
               <item name="sportsback" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sportsback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sportsback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="biz" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sportsback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="biz" type="462c0819:PsiDirectoryNode" />
-              <item name="club" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sportsback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="biz" type="462c0819:PsiDirectoryNode" />
-              <item name="club" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sportsback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="biz" type="462c0819:PsiDirectoryNode" />
-              <item name="club" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sportsback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="biz" type="462c0819:PsiDirectoryNode" />
-              <item name="sports" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sportsback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="biz" type="462c0819:PsiDirectoryNode" />
-              <item name="sports" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sportsback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="biz" type="462c0819:PsiDirectoryNode" />
-              <item name="sports" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sportsback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="biz" type="462c0819:PsiDirectoryNode" />
-              <item name="sports" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sportsback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sportsback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sportsback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="club" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sportsback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="sports" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sportsback" type="b2602c69:ProjectViewProjectNode" />
@@ -673,11 +418,11 @@
       <recent name="com.letansuo.sportsweb.utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WorkSpace_2\sportsback\src\main\resources\templates" />
       <recent name="D:\WorkSpace_2\sportsback\src\main\resources\static\views\sports" />
       <recent name="D:\WorkSpace_2\sportsback\src\main\resources\static" />
       <recent name="D:\WorkSpace_2\sportsback\src\main\java\com\letansuo\sportsback\biz\exprience" />
       <recent name="D:\WorkSpace_2\sportsback\src\main\resources\mapper\club" />
-      <recent name="D:\WorkSpace_2\sportsback\src\main\java\com\letansuo\sportsback\biz\sports" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -862,12 +607,12 @@
       <workItem from="1567932963305" duration="25333000" />
       <workItem from="1568724409924" duration="21969000" />
       <workItem from="1569076685773" duration="272000" />
-      <workItem from="1569157152376" duration="27365000" />
+      <workItem from="1569157152376" duration="32118000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77534000" />
+    <option name="totallyTimeSpent" value="82287000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -880,7 +625,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
@@ -891,7 +635,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35259435" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16627358" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293556" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900944" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -902,7 +646,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.629717" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07783019" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26984978" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26984978" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -961,14 +705,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/common/vo/ResultVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="53" column="5" lean-forward="false" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/common/vo/BaseEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1331,19 +1067,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/model/Club.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="92" column="19" lean-forward="false" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="19" />
-          <folding>
-            <element signature="e#1629#1630#0" expanded="true" />
-            <element signature="e#1654#1655#0" expanded="true" />
-            <element signature="e#1700#1701#0" expanded="true" />
-            <element signature="e#1734#1735#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/club/ClubMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -1356,30 +1079,6 @@
             <marker date="1569666460997" expanded="true" signature="3371:3604" ph="update d_club... " />
             <marker date="1569666460997" expanded="true" signature="3700:3768" ph="delete from d_club... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/controller/ClubController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/views/club/club.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1430,10 +1129,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/controller/ClubController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/club/club.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="42" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/views/sports/sportsClassify.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="33" column="14" lean-forward="true" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+        <state relative-caret-position="191">
+          <caret line="39" column="11" lean-forward="true" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/model/Club.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1525">
+          <caret line="98" column="3" lean-forward="true" selection-start-line="98" selection-start-column="3" selection-end-line="98" selection-end-column="3" />
+          <folding>
+            <element signature="e#1652#1653#0" expanded="true" />
+            <element signature="e#1677#1678#0" expanded="true" />
+            <element signature="e#1723#1724#0" expanded="true" />
+            <element signature="e#1757#1758#0" expanded="true" />
+            <element signature="e#1925#1926#0" expanded="true" />
+            <element signature="e#1946#1947#0" expanded="true" />
+            <element signature="e#1984#1985#0" expanded="true" />
+            <element signature="e#2010#2011#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/views/club/club.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
           <folding />
         </state>
       </provider>
