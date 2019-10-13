@@ -35,11 +35,11 @@ public class ClassImgController {
     public ResultVo selectClassImg(ClassImg classImg)
     {
         PageInfo data = this.service.selectClassImg(classImg);
-        return ResultVo.success(data);
+        return ResultVo.success(data.getList(),data.getTotal());
     }
     @GetMapping({"/{imgid}"})
     public ResultVo select(@PathVariable("imgid") Integer imgid) {
-        return ResultVo.success(this.service.selectByPrimaryKey(imgid));
+        return ResultVo.success(this.service.selectByPrimaryKey(imgid),null);
     }
     @PostMapping({"/add"})
     public ResultVo add(@RequestBody ClassImg classImg) {

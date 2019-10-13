@@ -24,11 +24,11 @@ public class ExperienceController
   public ResultVo selectSportClassify(Experience experience)
   {
     PageInfo data = this.service.selectExpricence(experience);
-    return ResultVo.success(data);
+    return ResultVo.success(data.getList(),data.getTotal());
   }
   @GetMapping({"/{experienceid}"})
   public ResultVo select(@PathVariable("experienceid") Integer experienceid) {
-    return ResultVo.success(this.service.selectByPrimaryKey(experienceid));
+    return ResultVo.success(this.service.selectByPrimaryKey(experienceid),null);
   }
   @PostMapping({"/add"})
   public ResultVo add(@RequestBody Experience experience) {

@@ -5,17 +5,18 @@ import com.letansuo.sportsback.error.errorCode.basic.IErrorCodeEnum;
 
 public class ResultVo
 {
-    private Integer code;
-    public Object data;
-    public Integer total;
-    private ErrorInfo errorInfo;
+    private String code;
+    private Object data;
+    private Long count;
+    private String msg;
+//    private ErrorInfo errorInfo;
 
-    public Integer getCode()
+    public String getCode()
     {
         return this.code;
     }
 
-    public void setCode(Integer code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
@@ -27,48 +28,54 @@ public class ResultVo
         this.data = data;
     }
 
-    public ErrorInfo getErrorInfo() {
-        return this.errorInfo;
+    public Long getCount() {
+        return count;
     }
 
-    public void setErrorInfo(ErrorInfo errorInfo) {
-        this.errorInfo = errorInfo;
+    public void setCount(Long count) {
+        this.count = count;
     }
 
-    public static ResultVo success(Object object) {
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+
+    public static ResultVo success(Object object,Long count) {
         ResultVo result = new ResultVo();
-        result.setCode(Integer.valueOf(0));
+        result.setCode("0");
         result.setData(object);
+        result.setCount(count);
         return result;
     }
 
     public static ResultVo success() {
-        return success(null);
+        return success(null,null);
     }
 
     public static ResultVo error(IErrorCodeEnum errorCodeEnum) {
         ResultVo result = new ResultVo();
-        result.setCode(Integer.valueOf(1));
-        ErrorInfo errorInfo = new ErrorInfo(errorCodeEnum);
-        result.setErrorInfo(errorInfo);
+        result.setCode(errorCodeEnum.getErrorCode());
+        result.setMsg(errorCodeEnum.getErrorMsg());
         return result;
     }
 
     public static ResultVo authError(IErrorCodeEnum errorCodeEnum) {
         ResultVo result = new ResultVo();
-        result.setCode(Integer.valueOf(2));
-        ErrorInfo errorInfo = new ErrorInfo(errorCodeEnum);
-        result.setErrorInfo(errorInfo);
+        result.setCode("2");
+        result.setCode(errorCodeEnum.getErrorCode());
+        result.setMsg(errorCodeEnum.getErrorMsg());
         return result;
     }
 
     public static ResultVo error(String errorCode, String errorMsg) {
         ResultVo result = new ResultVo();
-        ErrorInfo errorInfo = new ErrorInfo();
-        result.setCode(Integer.valueOf(1));
-        errorInfo.setErrorCode(errorCode);
-        errorInfo.setErrorMsg(errorMsg);
-        result.setErrorInfo(errorInfo);
+        result.setCode(errorCode);
+        result.setMsg(errorMsg);
         return result;
     }
 }
