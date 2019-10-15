@@ -16,6 +16,7 @@ public class Club extends BaseEntity
   private String lng;
   private String content;
   private Integer vipflag;
+  private String createtime;
 
   public Integer getClubid()
   {
@@ -112,5 +113,13 @@ public class Club extends BaseEntity
 
   public void setLogo(String logo) {
     this.logo = logo;
+  }
+
+  public String getCreatetime() {
+    return createtime;
+  }
+
+  public void setCreatetime(String createtime) {
+    this.createtime = createtime;
   }
 }
