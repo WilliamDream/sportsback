@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04c77483-baa1-4bfe-b582-de3c9ed22aec" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery-3.2.1.min.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/model/Club.java" afterPath="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/model/Club.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/club/ClubMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/club/ClubMapper.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/views/club/club.html" afterPath="$PROJECT_DIR$/src/main/resources/static/views/club/club.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/views/club/club.html" afterPath="$PROJECT_DIR$/target/classes/static/views/club/club.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +20,8 @@
       <file leaf-file-name="club.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/views/club/club.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="154" column="44" lean-forward="true" selection-start-line="154" selection-start-column="44" selection-end-line="154" selection-end-column="44" />
+            <state relative-caret-position="297">
+              <caret line="205" column="57" lean-forward="true" selection-start-line="205" selection-start-column="57" selection-end-line="205" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -174,6 +168,7 @@
       <find>describe</find>
       <find>springloaded</find>
       <find>btn_search</find>
+      <find>showEditModel</find>
     </findStrings>
     <replaceStrings>
       <replace>Integer</replace>
@@ -874,12 +869,12 @@
       <workItem from="1569076685773" duration="272000" />
       <workItem from="1569157152376" duration="35175000" />
       <workItem from="1570927374407" duration="5414000" />
-      <workItem from="1570932897439" duration="10899000" />
+      <workItem from="1570932897439" duration="17097000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101657000" />
+    <option name="totallyTimeSpent" value="107855000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -903,7 +898,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33726415" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16037735" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293556" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900944" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1446,8 +1441,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/views/club/club.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="154" column="44" lean-forward="true" selection-start-line="154" selection-start-column="44" selection-end-line="154" selection-end-column="44" />
+        <state relative-caret-position="297">
+          <caret line="205" column="57" lean-forward="true" selection-start-line="205" selection-start-column="57" selection-end-line="205" selection-end-column="57" />
           <folding />
         </state>
       </provider>
