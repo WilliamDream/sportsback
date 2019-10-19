@@ -1,6 +1,7 @@
 package com.letansuo.sportsback.common.vo;
 
 
+import com.github.pagehelper.PageInfo;
 import com.letansuo.sportsback.error.errorCode.basic.IErrorCodeEnum;
 
 public class ResultVo
@@ -44,6 +45,24 @@ public class ResultVo
     }
 
 
+    public static ResultVo success(Object object) {
+        ResultVo result = new ResultVo();
+        result.setCode("0");
+        result.setData(object);
+        result.setCount(null);
+        result.setMsg("操作成功");
+        return result;
+    }
+
+    public static ResultVo success(PageInfo pageInfo) {
+        ResultVo result = new ResultVo();
+        result.setCode("0");
+        result.setData(pageInfo.getList());
+        result.setCount(pageInfo.getTotal());
+        result.setMsg("操作成功");
+        return result;
+    }
+
     public static ResultVo success(Object object,Long count) {
         ResultVo result = new ResultVo();
         result.setCode("0");
@@ -63,7 +82,7 @@ public class ResultVo
     }
 
     public static ResultVo success() {
-        return success(null,null,"操作成功");
+        return success(null,null);
     }
 
     public static ResultVo success(String msg) {

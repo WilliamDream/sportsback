@@ -48,7 +48,7 @@
         var $ = layui.jquery;
         var form = layui.form;
         var laypage = layui.laypage;
-        var upload = layui.upload;
+        // var upload = layui.upload;
         var total = 0;
 
         //第一个实例
@@ -59,10 +59,10 @@
             ,page: true //开启分页
             ,request: {
                 pageName: 'pageNum', //页码的参数名称，默认：page
-                limitName: 'pageSize' //每页数据量的参数名，默认：limit
+                limitName: 'pageSize' //每页数据量的参数名，默认：limitindex
             }
             ,cols: [[ //表头
-                {field: 'id', title: '序号', width:80, sort: true, fixed: 'center'}
+                {field: '', title: '序号', width:80, sort: true, fixed: 'center'}
                 ,{field: 'clubname', title: '俱乐部名', width:200, fixed: 'left'}
                 ,{field: 'clubicon', title: 'logo', width:80, fixed: 'center'}
                 ,{field: 'charge', title: '负责人', width:80, fixed: 'center'}
@@ -188,29 +188,33 @@
                 area: ['800px', '600px'],
                 title: data ? '编辑俱乐部' : '新增俱乐部',
                 content: $('#club_form_html').html(),
-                btnAlign:'c'
+                btnAlign:'l'
             });
         }
 
         //上传图片
-        upload.render({
-            elem: '#btn_upload' //绑定元素
-            ,url: '/classimg/upload' //上传接口
-            ,done: function(res){
-                if(res.code=="0"){
-                    $("#in_clubicon").val(res.msg);
-                    layer.alert(res.msg, {icon: 1});
-                }else{
-                    layer.alert(res.msg, {icon: 5});
+        layui.use('upload', function() {
+            debugger;
+            var upload = layui.upload;
+            var uploadInst = upload.render({
+                elem: '#btn_upload' //绑定元素
+                , url: '/classimg/upload' //上传接口
+                , done: function (res) {
+                    debugger
+                    if (res.code == "0") {
+                        $("#in_clubicon").val(res.msg);
+                        layer.alert(res.msg, {icon: 1});
+                    } else {
+                        layer.alert(res.msg, {icon: 5});
+                    }
+
                 }
-
-            }
-            ,error: function(){
-                //请求异常回调
-                layer.alert('上传失败', {icon: 5});
-            }
+                , error: function () {
+                    //请求异常回调
+                    layer.alert('上传失败', {icon: 5});
+                }
+            });
         });
-
 
     });
 </script>

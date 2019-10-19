@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>体育俱乐部管理</title>
+    <title>体验课</title>
     <link rel="stylesheet" href="../../layui/css/layui.css" media="all">
 </head>
 <body>
@@ -49,27 +49,38 @@
         var form = layui.form;
         var laypage = layui.laypage;
         // var upload = layui.upload;
+        debugger
         var total = 0;
 
         //第一个实例
         table.render({
             elem: '#datatable'
             ,height: 312
-            ,url: '/club/all' //数据接口
+            ,url: '/experi/all' //数据接口
             ,page: true //开启分页
             ,request: {
                 pageName: 'pageNum', //页码的参数名称，默认：page
-                limitName: 'pageSize' //每页数据量的参数名，默认：limitindex
+                limitName: 'pageSize' //每页数据量的参数名，默认：limit
             }
             ,cols: [[ //表头
-                {field: '', title: '序号', width:80, sort: true, fixed: 'center'}
-                ,{field: 'clubname', title: '俱乐部名', width:200, fixed: 'left'}
-                ,{field: 'clubicon', title: 'logo', width:80, fixed: 'center'}
-                ,{field: 'charge', title: '负责人', width:80, fixed: 'center'}
-                ,{field: 'mobile', title: '电话', width:150, fixed: 'center'}
-                ,{field: 'wechat', title: '微信', width: 150, fixed: 'center'}
-                ,{field: 'address', title: '地址', width: 350 , fixed: 'center'}
-                ,{field: 'vipflag', title: '是否VIP', width: 100, fixed: 'center', templet: '#vip_temp'}
+                {field: 'index', title: '序号', width:80, sort: true, fixed: 'center'}
+                ,{field: 'name', title: '俱乐部名', width:200, fixed: 'left'}
+                ,{field: 'typeId', title: '类型', width:80, fixed: 'center'}
+                ,{field: 'clubId', title: '俱乐部', width:80, fixed: 'center'}
+                ,{field: 'price', title: '价格', width:150, fixed: 'center'}
+                ,{field: 'specialPrice', title: '特价', width: 150, fixed: 'center'}
+                ,{field: 'bottomPrice', title: '最低价', width: 350 , fixed: 'center'}
+                ,{field: 'groupPrice', title: '团购价', width: 100, fixed: 'center', templet: '#vip_temp'}
+                ,{field: 'priceFlag', title: '价格展示', width: 100, fixed: 'center', templet: '#vip_temp'}
+                ,{field: 'age', title: '年龄段', width:150, fixed: 'center'}
+                ,{field: 'address', title: '地址', width:150, fixed: 'center'}
+                ,{field: 'status', title: '状态', width:150, fixed: 'center'}
+                ,{field: 'flag', title: '推荐指数', width:150, fixed: 'center'}
+                ,{field: 'teacher', title: '教练', width:150, fixed: 'center'}
+                ,{field: 'stuNumber', title: '招生数', width:150, fixed: 'center'}
+                ,{field: 'startDate', title: '开始日期', width:150, fixed: 'center'}
+                ,{field: 'endDate', title: '结束日期', width:150, fixed: 'center'}
+                ,{field: 'createTime', title: '发布日期', width:150, fixed: 'center'}
                 ,{fixed: 'left', title: '操作', align:'center', toolbar: '#toolbar'}
             ]]
             ,done:function (res,curr,count) {

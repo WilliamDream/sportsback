@@ -28,11 +28,11 @@ public class ClubController
     public ResultVo selectSportClassify(Club club)
     {
         PageInfo data = this.service.selectClub(club);
-        return ResultVo.success(data.getList(),data.getTotal());
+        return ResultVo.success(data);
     }
     @GetMapping({"/{clubid}"})
     public ResultVo select(@PathVariable("clubid") Integer clubid) {
-        return ResultVo.success(this.service.selectByPrimaryKey(clubid),null);
+        return ResultVo.success(this.service.selectByPrimaryKey(clubid));
     }
     @PostMapping({"/add"})
     public ResultVo add(@RequestBody Club club) {
