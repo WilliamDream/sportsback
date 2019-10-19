@@ -9,7 +9,6 @@ public class ResultVo
     private Object data;
     private Long count;
     private String msg;
-//    private ErrorInfo errorInfo;
 
     public String getCode()
     {
@@ -50,11 +49,25 @@ public class ResultVo
         result.setCode("0");
         result.setData(object);
         result.setCount(count);
+        result.setMsg("操作成功");
+        return result;
+    }
+
+    public static ResultVo success(Object object,Long count,String msg) {
+        ResultVo result = new ResultVo();
+        result.setCode("0");
+        result.setData(object);
+        result.setCount(count);
+        result.setMsg(msg);
         return result;
     }
 
     public static ResultVo success() {
-        return success(null,null);
+        return success(null,null,"操作成功");
+    }
+
+    public static ResultVo success(String msg) {
+        return success(null,null,msg);
     }
 
     public static ResultVo error(IErrorCodeEnum errorCodeEnum) {
@@ -69,6 +82,20 @@ public class ResultVo
         result.setCode("2");
         result.setCode(errorCodeEnum.getErrorCode());
         result.setMsg(errorCodeEnum.getErrorMsg());
+        return result;
+    }
+
+    public static ResultVo error() {
+        ResultVo result = new ResultVo();
+        result.setCode("1");
+        result.setMsg("操作失败");
+        return result;
+    }
+
+    public static ResultVo error(String errorMsg) {
+        ResultVo result = new ResultVo();
+        result.setCode("1");
+        result.setMsg(errorMsg);
         return result;
     }
 

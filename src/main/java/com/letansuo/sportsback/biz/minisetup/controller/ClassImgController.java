@@ -7,6 +7,7 @@ import com.letansuo.sportsback.common.vo.ResultVo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -56,13 +57,17 @@ public class ClassImgController {
         if (!fileName.matches("^.+\\.(?i)(jpg)$") && !fileName.matches("^.+\\.(?i)(png)$")) {
             return ResultVo.error("1", "上传图片格式错误，请上传后缀为.jpg .png  .gif的文件");
         }
+        String filenNme = request.getParameter("filename");
+        if(!StringUtils.isEmpty(request.getParameter("filename"))){
+            fileName = request.getParameter("filename");
+        }
         fileName = new String(fileName.getBytes("UTF-8"), "UTF-8");
         String filePath = "";
         String os =System.getProperty("os.name");
         if(os.equalsIgnoreCase("linux")) {
-            filePath = "/tmp/import/upload/";
+            filePath = "/tmp/import/upload/"+fileName;
         }else {
-            filePath = "D:/tmp/import/upload/";
+            filePath = "D:/tmp/import/upload/"+fileName;
         }
 
         String path = filePath+fileName;
@@ -78,9 +83,9 @@ public class ClassImgController {
 
         } catch (Exception e) {
             logger.error("上传失败!原因是:",e);
-            return ResultVo.error("1", "上传失败!");
+            return ResultVo.error( "上传失败!");
         }
-        return ResultVo.success();
+        return ResultVo.success(path);
     }
 
     @PostMapping({"/update"})

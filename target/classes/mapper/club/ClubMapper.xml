@@ -66,6 +66,9 @@
             <if test="wechat != null and wechat !=''">
                 wechat = #{wechat,jdbcType=VARCHAR},
             </if>
+            <if test="address != null and address !=''">
+                address = #{address,jdbcType=VARCHAR},
+            </if>
             <if test="lat != null and lat !=''">
                 lat = #{lat,jdbcType=VARCHAR},
             </if>
@@ -75,8 +78,8 @@
             <if test="content != null and content !=''">
                 content = #{content,jdbcType=VARCHAR},
             </if>
-            <if test="vipflag != null and vipflag !=''">
-                vipFlag = #{vipflag,jdbcType=INTEGER}
+            <if test="vipflag != null">
+                vipFlag = #{vipflag,jdbcType=INTEGER},
             </if>
 
         </trim>

@@ -3,7 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="04c77483-baa1-4bfe-b582-de3c9ed22aec" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/controller/ClubController.java" afterPath="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/controller/ClubController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/minisetup/controller/ClassImgController.java" afterPath="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/minisetup/controller/ClassImgController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/common/vo/ResultVo.java" afterPath="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/common/vo/ResultVo.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/club/ClubMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/club/ClubMapper.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/views/club/club.html" afterPath="$PROJECT_DIR$/src/main/resources/static/views/club/club.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/letansuo/sportsback/biz/club/controller/ClubController.class" afterPath="$PROJECT_DIR$/target/classes/com/letansuo/sportsback/biz/club/controller/ClubController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/letansuo/sportsback/common/vo/ResultVo.class" afterPath="$PROJECT_DIR$/target/classes/com/letansuo/sportsback/common/vo/ResultVo.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/club/ClubMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/club/ClubMapper.xml" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/views/club/club.html" afterPath="$PROJECT_DIR$/target/classes/static/views/club/club.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -19,21 +28,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="club.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/views/club/club.html">
+      <file leaf-file-name="ResultVo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/common/vo/ResultVo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="130" column="28" lean-forward="false" selection-start-line="130" selection-start-column="28" selection-end-line="130" selection-end-column="28" />
-              <folding />
+            <state relative-caret-position="271">
+              <caret line="98" column="22" lean-forward="true" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
+              <folding>
+                <element signature="e#1332#1333#0" expanded="true" />
+                <element signature="e#1380#1381#0" expanded="true" />
+                <element signature="e#1430#1431#0" expanded="true" />
+                <element signature="e#1475#1476#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="BaseEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/common/vo/BaseEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="194" column="62" lean-forward="false" selection-start-line="194" selection-start-column="62" selection-end-line="194" selection-end-column="62" />
+            <state relative-caret-position="-60">
+              <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+              <folding>
+                <element signature="e#160#161#0" expanded="true" />
+                <element signature="e#195#196#0" expanded="true" />
+                <element signature="e#238#239#0" expanded="true" />
+                <element signature="e#276#277#0" expanded="true" />
+                <element signature="e#308#309#0" expanded="true" />
+                <element signature="e#344#345#0" expanded="true" />
+                <element signature="e#389#390#0" expanded="true" />
+                <element signature="e#429#430#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="club.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/views/club/club.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="47" column="29" lean-forward="true" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -42,18 +75,28 @@
       <file leaf-file-name="ClubController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/controller/ClubController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="27" column="42" lean-forward="false" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+            <state relative-caret-position="165">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InvocableHandlerMethod.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.8.RELEASE/spring-web-5.1.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <file leaf-file-name="ClassImgController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/minisetup/controller/ClassImgController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+            <state relative-caret-position="975">
+              <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PageInfo.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/github/pagehelper/pagehelper/5.1.3/pagehelper-5.1.3.jar!/com/github/pagehelper/PageInfo.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -62,8 +105,8 @@
       <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            <state relative-caret-position="386">
+              <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -79,39 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClubServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/service/impl/ClubServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-25">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClubMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/club/ClubMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-              <folding>
-                <marker date="1571150607295" expanded="true" signature="1533:1697" ph="select clubI... d_club" />
-                <marker date="1571150607295" expanded="true" signature="1798:1911" ph="select clubI... d_club" />
-                <marker date="1571150607295" expanded="true" signature="1798:1921" ph="select clubI... d_club" />
-                <marker date="1571150607295" expanded="true" signature="1798:1995" ph="select clubI... d_club" />
-                <marker date="1571150607295" expanded="true" signature="2111:2542" ph="insert into d_club... " />
-                <marker date="1571150607295" expanded="true" signature="2624:3889" ph="update d_club... " />
-                <marker date="1571150607295" expanded="true" signature="3985:4053" ph="delete from d_club... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Club.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/model/Club.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="24" />
+            <state relative-caret-position="100">
+              <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
               <folding>
                 <element signature="e#1679#1680#0" expanded="true" />
                 <element signature="e#1703#1704#0" expanded="true" />
@@ -125,6 +140,24 @@
                 <element signature="e#2094#2095#0" expanded="true" />
                 <element signature="e#2144#2145#0" expanded="true" />
                 <element signature="e#2182#2183#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClubMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/club/ClubMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="734">
+              <caret line="79" column="17" lean-forward="true" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
+              <folding>
+                <marker date="1571455375282" expanded="true" signature="1533:1697" ph="select clubI... d_club" />
+                <marker date="1571455375282" expanded="true" signature="1798:1911" ph="select clubI... d_club" />
+                <marker date="1571455375282" expanded="true" signature="1798:1921" ph="select clubI... d_club" />
+                <marker date="1571455375282" expanded="true" signature="1798:1995" ph="select clubI... d_club" />
+                <marker date="1571455375282" expanded="true" signature="2111:2542" ph="insert into d_club... " />
+                <marker date="1571455375282" expanded="true" signature="2624:4003" ph="update d_club... " />
+                <marker date="1571455375282" expanded="true" signature="4099:4167" ph="delete from d_club... " />
               </folding>
             </state>
           </provider>
@@ -147,7 +180,6 @@
       <find>Byte</find>
       <find>count</find>
       <find>SportClassify</find>
-      <find>updateByPrimaryKey</find>
       <find>ClubMapper</find>
       <find>org.mybatis.generator</find>
       <find>desc</find>
@@ -157,6 +189,10 @@
       <find>display:none</find>
       <find>showEditModel</find>
       <find>userForm</find>
+      <find>updateByPrimaryKey</find>
+      <find>wh</find>
+      <find>upload</find>
+      <find>btn_upload</find>
     </findStrings>
     <replaceStrings>
       <replace>Integer</replace>
@@ -185,7 +221,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/club/SportClassifyMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/service/ClubService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/service/impl/SportClassifyServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/exprience/controller/ExperienceController.java" />
@@ -222,19 +257,20 @@
         <option value="$PROJECT_DIR$/src/main/resources/mapper/sports/SportClassifyMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/static/views/sports/sportsClassify.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/club/club.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/error/errorCode/basic/IErrorCodeEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/controller/ClubController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/experience/controller/ExperienceController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/minisetup/controller/ClassImgController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/sports/controller/SportClassifyController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/classes/controller/ClassesController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/common/vo/ResultVo.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application-dev.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/model/Club.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/club/ClubMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/static/layui/css/layui.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/club/ClubMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/controller/ClubController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/common/vo/BaseEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/common/vo/ResultVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/minisetup/controller/ClassImgController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/views/club/club.html" />
       </list>
     </option>
@@ -265,7 +301,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="width" value="1929" />
     <option name="height" value="1038" />
@@ -434,50 +470,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="sportsback" type="462c0819:PsiDirectoryNode" />
               <item name="biz" type="462c0819:PsiDirectoryNode" />
-              <item name="club" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sportsback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="biz" type="462c0819:PsiDirectoryNode" />
-              <item name="club" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sportsback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="biz" type="462c0819:PsiDirectoryNode" />
-              <item name="club" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sportsback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="biz" type="462c0819:PsiDirectoryNode" />
-              <item name="club" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sportsback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="biz" type="462c0819:PsiDirectoryNode" />
               <item name="experience" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -488,7 +480,17 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="sportsback" type="462c0819:PsiDirectoryNode" />
               <item name="biz" type="462c0819:PsiDirectoryNode" />
-              <item name="experience" type="462c0819:PsiDirectoryNode" />
+              <item name="minisetup" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sportsback" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
+              <item name="biz" type="462c0819:PsiDirectoryNode" />
+              <item name="minisetup" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -579,25 +581,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="layui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sportsback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="layui" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sportsback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sportsback" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -664,7 +647,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/WorkSpace_Idea/ learning-essence" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelWidth1" value="75" />
@@ -876,12 +859,12 @@
       <workItem from="1569076685773" duration="272000" />
       <workItem from="1569157152376" duration="35175000" />
       <workItem from="1570927374407" duration="5414000" />
-      <workItem from="1570932897439" duration="22186000" />
+      <workItem from="1570932897439" duration="41066000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112944000" />
+    <option name="totallyTimeSpent" value="131824000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -893,7 +876,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -905,7 +888,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16037735" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32665095" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293556" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900944" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -946,24 +929,17 @@
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/controller/ClubController.java</url>
-          <line>29</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/minisetup/controller/ClassImgController.java</url>
+          <line>65</line>
           <properties />
-          <option name="timeStamp" value="18" />
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="19" />
+      <option name="time" value="29" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/minisetup/service/ClassImgService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="12" column="54" lean-forward="false" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/a.jpg" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar!/org/slf4j/LoggerFactory.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -1131,13 +1107,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/pagehelper/pagehelper/5.1.3/pagehelper-5.1.3.jar!/com/github/pagehelper/PageInfo.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/common/vo/ErrorInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
@@ -1201,14 +1170,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/minisetup/controller/ClassImgController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="41" column="75" lean-forward="false" selection-start-line="41" selection-start-column="75" selection-end-line="41" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/sports/controller/SportClassifyController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -1236,14 +1197,6 @@
             <marker date="1569073928054" expanded="true" signature="4622:6706" ph="update d_class... " />
             <marker date="1569073928054" expanded="true" signature="6794:6861" ph="delete from d_class... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/common/vo/ResultVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="52" column="22" lean-forward="true" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1329,10 +1282,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/layui/css/layui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="1" column="24725" lean-forward="false" selection-start-line="1" selection-start-column="24630" selection-end-line="1" selection-end-column="24725" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.8.RELEASE/spring-web-5.1.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/service/impl/ClubServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="204">
+          <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1345,50 +1314,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.8.RELEASE/spring-web-5.1.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        <state relative-caret-position="386">
+          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/club/ClubMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="734">
+          <caret line="79" column="17" lean-forward="true" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
           <folding>
-            <marker date="1571150607295" expanded="true" signature="1533:1697" ph="select clubI... d_club" />
-            <marker date="1571150607295" expanded="true" signature="1798:1911" ph="select clubI... d_club" />
-            <marker date="1571150607295" expanded="true" signature="1798:1921" ph="select clubI... d_club" />
-            <marker date="1571150607295" expanded="true" signature="1798:1995" ph="select clubI... d_club" />
-            <marker date="1571150607295" expanded="true" signature="2111:2542" ph="insert into d_club... " />
-            <marker date="1571150607295" expanded="true" signature="2624:3889" ph="update d_club... " />
-            <marker date="1571150607295" expanded="true" signature="3985:4053" ph="delete from d_club... " />
+            <marker date="1571455375282" expanded="true" signature="1533:1697" ph="select clubI... d_club" />
+            <marker date="1571455375282" expanded="true" signature="1798:1911" ph="select clubI... d_club" />
+            <marker date="1571455375282" expanded="true" signature="1798:1921" ph="select clubI... d_club" />
+            <marker date="1571455375282" expanded="true" signature="1798:1995" ph="select clubI... d_club" />
+            <marker date="1571455375282" expanded="true" signature="2111:2542" ph="insert into d_club... " />
+            <marker date="1571455375282" expanded="true" signature="2624:4003" ph="update d_club... " />
+            <marker date="1571455375282" expanded="true" signature="4099:4167" ph="delete from d_club... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/layui/css/layui.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="1" column="24725" lean-forward="false" selection-start-line="1" selection-start-column="24630" selection-end-line="1" selection-end-column="24725" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/model/Club.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="24" />
+        <state relative-caret-position="100">
+          <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
           <folding>
             <element signature="e#1679#1680#0" expanded="true" />
             <element signature="e#1703#1704#0" expanded="true" />
@@ -1406,18 +1359,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/pagehelper/pagehelper/5.1.3/pagehelper-5.1.3.jar!/com/github/pagehelper/PageInfo.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/common/vo/BaseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-60">
+          <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+          <folding>
+            <element signature="e#160#161#0" expanded="true" />
+            <element signature="e#195#196#0" expanded="true" />
+            <element signature="e#238#239#0" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
+            <element signature="e#308#309#0" expanded="true" />
+            <element signature="e#344#345#0" expanded="true" />
+            <element signature="e#389#390#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/club/controller/ClubController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="27" column="42" lean-forward="false" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+        <state relative-caret-position="165">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/common/vo/ResultVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="98" column="22" lean-forward="true" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
+          <folding>
+            <element signature="e#1332#1333#0" expanded="true" />
+            <element signature="e#1380#1381#0" expanded="true" />
+            <element signature="e#1430#1431#0" expanded="true" />
+            <element signature="e#1475#1476#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/minisetup/controller/ClassImgController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/views/club/club.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="130" column="28" lean-forward="false" selection-start-line="130" selection-start-column="28" selection-end-line="130" selection-end-column="28" />
+        <state relative-caret-position="250">
+          <caret line="47" column="29" lean-forward="true" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
           <folding />
         </state>
       </provider>

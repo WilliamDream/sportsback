@@ -31,7 +31,7 @@ public class ClubController
         return ResultVo.success(data.getList(),data.getTotal());
     }
     @GetMapping({"/{clubid}"})
-    public ResultVo select(@PathVariable("typeid") Integer clubid) {
+    public ResultVo select(@PathVariable("clubid") Integer clubid) {
         return ResultVo.success(this.service.selectByPrimaryKey(clubid),null);
     }
     @PostMapping({"/add"})
@@ -45,7 +45,7 @@ public class ClubController
         return ResultVo.success();
     }
     @GetMapping({"/del/{clubid}"})
-    public ResultVo delete(@PathVariable("typeid") Integer clubid) {
+    public ResultVo delete(@PathVariable("clubid") Integer clubid) {
         this.service.deleteByPrimaryKey(clubid);
         return ResultVo.success();
     }

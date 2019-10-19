@@ -43,10 +43,13 @@
 </script>
 
 <script>
-    layui.use(['layer', 'form', 'table', 'util'], function(){
+    layui.use(['layer', 'form', 'table', 'util', 'laypage','upload'], function(){
         var table = layui.table;
         var $ = layui.jquery;
         var form = layui.form;
+        var laypage = layui.laypage;
+        var upload = layui.upload;
+        var total = 0;
 
         //第一个实例
         table.render({
@@ -54,10 +57,14 @@
             ,height: 312
             ,url: '/club/all' //数据接口
             ,page: true //开启分页
+            ,request: {
+                pageName: 'pageNum', //页码的参数名称，默认：page
+                limitName: 'pageSize' //每页数据量的参数名，默认：limit
+            }
             ,cols: [[ //表头
                 {field: 'id', title: '序号', width:80, sort: true, fixed: 'center'}
                 ,{field: 'clubname', title: '俱乐部名', width:200, fixed: 'left'}
-                ,{field: 'logo', title: 'logo', width:80, fixed: 'center'}
+                ,{field: 'clubicon', title: 'logo', width:80, fixed: 'center'}
                 ,{field: 'charge', title: '负责人', width:80, fixed: 'center'}
                 ,{field: 'mobile', title: '电话', width:150, fixed: 'center'}
                 ,{field: 'wechat', title: '微信', width: 150, fixed: 'center'}
@@ -65,11 +72,27 @@
                 ,{field: 'vipflag', title: '是否VIP', width: 100, fixed: 'center', templet: '#vip_temp'}
                 ,{fixed: 'left', title: '操作', align:'center', toolbar: '#toolbar'}
             ]]
+            ,done:function (res,curr,count) {
+                total = res.count;
+            }
+            ,limit:10
+            ,limits:[10,15,20]
             ,defaultToolbar: ['filter', 'print', 'exports', {
                 title: '提示' //标题
                 ,layEvent: 'LAYTABLE_TIPS' //事件名，用于 toolbar 事件中使用
                 ,icon: 'layui-icon-tips' //图标类名
             }]
+        });
+
+        laypage.render({
+            elem:'datatable',
+            count:total,
+            limit:10,
+            groups:5,
+            jump: function(obj, first){
+
+            }
+
         });
 
 
@@ -101,15 +124,29 @@
             if(layEvent === 'detail'){ //查看
                 //do somehing
             } else if(layEvent === 'delete'){ //删除
-                layer.confirm('真的删除行么', function(index){
-                    obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
+                layer.confirm('确定删除吗？', function(index){
+                    obj.del();
                     layer.close(index);
-                    //向服务端发送删除指令
+                    $.ajax({
+                        url:'/club/del/'+ data.clubid,
+                        method:'get',
+                        // data:JSON.stringify(data),
+                        dataType:'JSON',
+                        // contentType:'application/json',
+                        success:function(res){
+                            debugger
+                            if(res.code='0'){
+                                layer.alert(res.msg, {icon: 1});
+                            }
+                            else
+                                layer.alert(res.msg, {icon: 5});
+                        },
+                    }) ;
                 });
             } else if(layEvent === 'update'){ //编辑
                 showEditModel();
+                //回显数据
                 form.val('data_form',data);
-
             } else if(layEvent === 'add'){  //新增
 
             } else if(layEvent === 'LAYTABLE_TIPS'){
@@ -122,22 +159,22 @@
         layui.use('form', function(){
             var form = layui.form;
             //监听提交
-            form.on('submit(form_submit)', function(data){
-                debugger;
-                layer.msg(JSON.stringify(data.field));
+            form.on('submit(form_submit)', function(val){
+                var data =  val.field;
                 var clubid = data.clubid;
                 var url = clubid==''?'/club/add':'/club/update';
                 $.ajax({
                     url:url,
                     method:'post',
-                    data:data.field,
+                    data:JSON.stringify(data),
                     dataType:'JSON',
+                    contentType:'application/json',
                     success:function(res){
                         if(res.code='0'){
-                            parent.closeIframe(res.msg);
+                            layer.alert(res.msg, {icon: 1});
                         }
                         else
-                            alert(res.msg);
+                            layer.alert(res.msg, {icon: 5});
                     },
                 }) ;
             });
@@ -155,6 +192,24 @@
             });
         }
 
+        //上传图片
+        upload.render({
+            elem: '#btn_upload' //绑定元素
+            ,url: '/classimg/upload' //上传接口
+            ,done: function(res){
+                if(res.code=="0"){
+                    $("#in_clubicon").val(res.msg);
+                    layer.alert(res.msg, {icon: 1});
+                }else{
+                    layer.alert(res.msg, {icon: 5});
+                }
+
+            }
+            ,error: function(){
+                //请求异常回调
+                layer.alert('上传失败', {icon: 5});
+            }
+        });
 
 
     });
@@ -198,7 +253,8 @@
             <div class="layui-inline">
                 <label class="layui-form-label">是否VIP</label>
                 <div class="layui-input-inline">
-                    <input type="checkbox" name="vipflag" lay-skin="switch" checked>
+                    <input type="radio" name="vipflag" value="1" title="是">
+                    <input type="radio" name="vipflag" value="0" title="否" checked>
                 </div>
             </div>
         </div>
@@ -210,18 +266,20 @@
             </div>
         </div>
         <div class="layui-form-item">
-            <label class="layui-form-label">俱乐部地址</label>
+            <label class="layui-form-label">俱乐部</label>
             <div class="layui-input-block">
-                <button type="button" class="layui-btn" id="test1">
+                <button type="button" class="layui-btn" id="btn_upload">
                     <i class="layui-icon">&#xe67c;</i>上传图片
                 </button>
+                <input name="clubicon" type="hidden" value="" id="in_clubicon">
+                <img src="" style="width: 200px;height: 150px;" >
             </div>
         </div>
 
         <div class="layui-form-item">
             <label class="layui-form-label">简介</label>
             <div class="layui-input-block">
-                <textarea name="" placeholder="请输入俱乐部简介" class="layui-textarea"></textarea>
+                <textarea name="content" placeholder="请输入俱乐部简介" class="layui-textarea"></textarea>
             </div>
         </div>
 
