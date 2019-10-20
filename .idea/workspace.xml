@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04c77483-baa1-4bfe-b582-de3c9ed22aec" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/experience/model/Experience.java" afterPath="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/experience/model/Experience.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/sports/controller/SportClassifyController.java" afterPath="$PROJECT_DIR$/src/main/java/com/letansuo/sportsback/biz/sports/controller/SportClassifyController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/views/club/club.html" afterPath="$PROJECT_DIR$/src/main/resources/static/views/club/club.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/views/experience/experienct.html" afterPath="$PROJECT_DIR$/src/main/resources/static/views/experience/experience.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/letansuo/sportsback/biz/sports/controller/SportClassifyController.class" afterPath="$PROJECT_DIR$/target/classes/com/letansuo/sportsback/biz/sports/controller/SportClassifyController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/views/club/club.html" afterPath="$PROJECT_DIR$/target/classes/static/views/club/club.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/views/experience/experienct.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/views/experience/experience.html" afterPath="$PROJECT_DIR$/src/main/resources/static/views/experience/experience.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,8 +46,8 @@
       <file leaf-file-name="experience.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/views/experience/experience.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+            <state relative-caret-position="225">
+              <caret line="24" column="54" lean-forward="true" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -865,12 +856,12 @@
       <workItem from="1570927374407" duration="5414000" />
       <workItem from="1570932897439" duration="46484000" />
       <workItem from="1571540801662" duration="700000" />
-      <workItem from="1571579483747" duration="3983000" />
+      <workItem from="1571579483747" duration="4212000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141925000" />
+    <option name="totallyTimeSpent" value="142154000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1349,8 +1340,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/views/experience/experience.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+        <state relative-caret-position="225">
+          <caret line="24" column="54" lean-forward="true" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
           <folding />
         </state>
       </provider>
