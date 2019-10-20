@@ -1,5 +1,6 @@
 package com.letansuo.sportsback.biz.experience.model;
 
+import javax.persistence.Transient;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -49,6 +50,12 @@ public class Experience {
     private String createTime;
 
     private String descrite;
+
+    @Transient
+    private String createStart;
+
+    @Transient
+    private String createEnd;
 
     public Integer getExperienceId() {
         return experienceId;
@@ -232,5 +239,21 @@ public class Experience {
 
     public void setDescrite(String descrite) {
         this.descrite = descrite;
+    }
+
+    public String getCreateStart() {
+        return createStart;
+    }
+
+    public void setCreateStart(String createStart) {
+        this.createStart = createStart;
+    }
+
+    public String getCreateEnd() {
+        return createEnd;
+    }
+
+    public void setCreateEnd(String createEnd) {
+        this.createEnd = createEnd;
     }
 }

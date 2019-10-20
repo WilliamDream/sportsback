@@ -9,17 +9,79 @@
 
     <form class="layui-form" action="">
         <div class="layui-form-item">
-            <label class="layui-form-label">俱乐部名</label>
-            <div class="layui-input-inline">
-                <input type="text" id="clubname"  placeholder="请俱乐部名" autocomplete="off" class="layui-input">
+            <div class="layui-inline">
+                <label class="layui-form-label">课程名</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="in_name"  placeholder="请输入课程名" autocomplete="off" class="layui-input">
+                </div>
             </div>
-            <button type="button" class="layui-btn layui-btn-normal" lay-filter="btn_query" id="btn_search" lay-submit>
-                <i class="layui-icon">&#xe615;</i>查询
-            </button>
-            <button type="button" class="layui-btn layui-btn-normal" lay-event="add" id="btn_add">
-                <i class="layui-icon">&#xe608;</i> 新增
-            </button>
+            <div class="layui-inline">
+                <label class="layui-form-label">运动类型</label>
+                <div class="layui-input-inline">
+                    <select id="in_type" >
+                        <option value=""></option>
+                        <option value="0">北京</option>
+                        <option value="1">上海</option>
+                        <option value="2">广州</option>
+                        <option value="3">深圳</option>
+                        <option value="4">杭州</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">俱乐部</label>
+                <div class="layui-input-inline">
+                    <select id="in_club" >
+                        <option value=""></option>
+                        <option value="0">北京</option>
+                        <option value="1">上海</option>
+                        <option value="2">广州</option>
+                        <option value="3">深圳</option>
+                        <option value="4">杭州</option>
+                    </select>
+                </div>
+            </div>
         </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">课程状态</label>
+                <div class="layui-input-inline">
+                    <select id="in_status" >
+                        <option value=""></option>
+                        <option value="0">筹划中</option>
+                        <option value="1">报名中</option>
+                        <option value="2">进行中</option>
+                        <option value="3">已结束</option>
+                        <option value="4">已取消</option>
+                        <option value="5">已延期</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">创建时间始</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" id="in_creatstart">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">创建时间止</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" id="in_creatend">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <button type="button" class="layui-btn layui-btn-normal" lay-filter="btn_query" id="btn_search" lay-submit>
+                    <i class="layui-icon">&#xe615;</i>查询
+                </button>
+                <button type="button" class="layui-btn layui-btn-normal" lay-event="add" id="btn_add">
+                    <i class="layui-icon">&#xe608;</i> 新增
+                </button>
+            </div>
+
+        </div>
+
+
+
 
     </form>
     <table id="datatable" lay-filter="list"></table>
@@ -43,14 +105,20 @@
 </script>
 
 <script>
-    layui.use(['layer', 'form', 'table', 'util', 'laypage','upload'], function(){
+    layui.use(['layer', 'form', 'table', 'util', 'laypage','upload','laydate'], function(){
         var table = layui.table;
         var $ = layui.jquery;
         var form = layui.form;
         var laypage = layui.laypage;
         // var upload = layui.upload;
-        debugger
+        var laydate = layui.laydate;
         var total = 0;
+
+        laydate.render({
+            elem: '#in_creattime',
+            range: true
+
+        });
 
         //第一个实例
         table.render({
@@ -64,7 +132,7 @@
             }
             ,cols: [[ //表头
                 {field: 'index', title: '序号', width:80, sort: true, fixed: 'center'}
-                ,{field: 'name', title: '俱乐部名', width:200, fixed: 'left'}
+                ,{field: 'name', title: '课程名', width:200, fixed: 'left'}
                 ,{field: 'typeId', title: '类型', width:80, fixed: 'center'}
                 ,{field: 'clubId', title: '俱乐部', width:80, fixed: 'center'}
                 ,{field: 'price', title: '价格', width:150, fixed: 'center'}
@@ -128,8 +196,6 @@
         //对工具条监听
         table.on('tool(list)', function(obj){ //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
             var data = obj.data;        //获得当前行数据
-
-            debugger;
             var layEvent = obj.event;   //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
             var tr = obj.tr;            //获得当前行 tr 的 DOM 对象（如果有的话）
             if(layEvent === 'detail'){ //查看
