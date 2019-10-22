@@ -2,11 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.letansuo.sportsback.biz.experience.mapper.ExperienceMapper" >
     <resultMap id="BaseResultMap" type="com.letansuo.sportsback.biz.experience.model.Experience" >
-        <id column="experienceId" property="experienceid" jdbcType="INTEGER" />
+        <id column="experienceId" property="experienceId" jdbcType="INTEGER" />
         <result column="name" property="name" jdbcType="VARCHAR" />
-        <result column="typeId" property="typeid" jdbcType="INTEGER" />
-        <result column="clubId" property="clubid" jdbcType="INTEGER" />
-        <result column="operatorId" property="operatorid" jdbcType="INTEGER" />
+        <result column="typeId" property="typeId" jdbcType="INTEGER" />
+        <result column="clubId" property="clubId" jdbcType="INTEGER" />
+        <result column="operatorId" property="operatorId" jdbcType="INTEGER" />
         <result column="price" property="price" jdbcType="DECIMAL" />
         <result column="special_price" property="specialPrice" jdbcType="DECIMAL" />
         <result column="bottom_price" property="bottomPrice" jdbcType="DECIMAL" />
@@ -23,7 +23,7 @@
         <result column="stu_number" property="stuNumber" jdbcType="INTEGER" />
         <result column="startDate" property="startDate" jdbcType="VARCHAR" />
         <result column="endDate" property="endDate" jdbcType="VARCHAR" />
-        <result column="createtime" property="createtime" jdbcType="VARCHAR" />
+        <result column="createTime" property="createTime" jdbcType="VARCHAR" />
         <result column="descrite" property="descrite" jdbcType="LONGVARCHAR" />
     </resultMap>
 
@@ -43,26 +43,26 @@
             and status = #{status}
         </if>
         <if test="createStart != null and createStart !=''">
-            and createtime &gt;= #{createStart}
+            and createTime &gt;= #{createStart}
         </if>
         <if test="createEnd != null and createEnd !=''">
-            and createtime &lt;= #{createEnd}
+            and createTime &lt;= #{createEnd}
         </if>
 
     </sql>
 
     <select id="selectExpricence" parameterMap="Exprience" resultMap="BaseResultMap" >
         select experienceId, name, typeId, clubId, operatorId, price, specialprice, bottomprice,
-        groupprice, priceflag, age, address, status, flag, teacher, phone, stunumber, createtime,
+        groupprice, priceflag, age, address, status, flag, teacher, phone, stunumber, createTime,
         descrite
         from d_experience
         <include refid="where_all"/>
-        ORDER BY typeId, createtime
+        ORDER BY typeId, createTime
     </select>
 
     <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
         select experienceId, name, typeId, clubId, operatorId, price, specialprice, bottomprice,
-        groupprice, priceflag, age, address, status, flag, teacher, phone, stunumber, createtime,
+        groupprice, priceflag, age, address, status, flag, teacher, phone, stunumber, createTime,
         descrite
         from d_experience
         where experienceId = #{experienceId,jdbcType=INTEGER}

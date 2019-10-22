@@ -32,12 +32,12 @@
                 <label class="layui-form-label">俱乐部</label>
                 <div class="layui-input-inline">
                     <select id="in_club" >
-                        <option value=""></option>
+                        <!--<option value=""></option>
                         <option value="0">北京</option>
                         <option value="1">上海</option>
                         <option value="2">广州</option>
                         <option value="3">深圳</option>
-                        <option value="4">杭州</option>
+                        <option value="4">杭州</option>-->
                     </select>
                 </div>
             </div>
@@ -153,6 +153,7 @@
             ]]
             ,done:function (res,curr,count) {
                 total = res.count;
+                getClubs();
             }
             ,limit:10
             ,limits:[10,15,20]
@@ -173,7 +174,28 @@
             }
 
         });
+        
+        function getClubs() {
+            var data = "{pageNum:1,pageSize:20}";
+            $.ajax({
+                url:'/club/all/',
+                method:'get',
+                data:{pageNum:1,pageSize:20},
+                dataType:'JSON',
+                // contentType:'application/json',
+                success:function(res){
+                    if(res.code=='0'){
+                        var list = res.data;
+                        var html = "<option value=''></option>";
+                        for(var i=0;i<list.length;i++){
+                            html += "<option value='"+list[i].clubid+"'>"+list[i].clubname+"</option>";
+                        }
+                        $("#in_club").append(html);
+                    }
 
+                },
+            }) ;
+        }
 
         //查询
         $('#btn_search').click(function () {
@@ -211,7 +233,6 @@
                         dataType:'JSON',
                         // contentType:'application/json',
                         success:function(res){
-                            debugger
                             if(res.code='0'){
                                 layer.alert(res.msg, {icon: 1});
                             }
@@ -271,13 +292,11 @@
 
         //上传图片
         layui.use('upload', function() {
-            debugger;
             var upload = layui.upload;
             var uploadInst = upload.render({
                 elem: '#btn_upload' //绑定元素
                 , url: '/classimg/upload' //上传接口
                 , done: function (res) {
-                    debugger
                     if (res.code == "0") {
                         $("#in_clubicon").val(res.msg);
                         layer.alert(res.msg, {icon: 1});
@@ -302,9 +321,9 @@
     <form lay-filter="data_form" class="layui-form model-form">
         <input name="clubid" type="hidden" value=""/>
         <div class="layui-form-item">
-            <label class="layui-form-label">俱乐部名</label>
+            <label class="layui-form-label">课程名</label>
             <div class="layui-input-block">
-                <input name="clubname" placeholder="请输入俱乐部名" type="text" class="layui-input"
+                <input name="name" placeholder="请输入课程名" type="text" class="layui-input"
                        maxlength="20" lay-verify="required" required/>
             </div>
         </div>
