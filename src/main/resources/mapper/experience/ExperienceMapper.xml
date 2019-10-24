@@ -11,7 +11,7 @@
         <result column="special_price" property="specialPrice" jdbcType="DECIMAL" />
         <result column="bottom_price" property="bottomPrice" jdbcType="DECIMAL" />
         <result column="group_price" property="groupPrice" jdbcType="DECIMAL" />
-        <result column="price_flag" property="priceFlag" jdbcType="TINYINT" />
+        <result column="priceflag" property="priceFlag" jdbcType="TINYINT" />
         <result column="age" property="age" jdbcType="VARCHAR" />
         <result column="address" property="address" jdbcType="VARCHAR" />
         <result column="lng" property="lng" jdbcType="VARCHAR" />
@@ -20,7 +20,7 @@
         <result column="flag" property="flag" jdbcType="TINYINT" />
         <result column="teacher" property="teacher" jdbcType="VARCHAR" />
         <result column="phone" property="phone" jdbcType="VARCHAR" />
-        <result column="stu_number" property="stuNumber" jdbcType="INTEGER" />
+        <result column="stunumber" property="stuNumber" jdbcType="INTEGER" />
         <result column="startDate" property="startDate" jdbcType="VARCHAR" />
         <result column="endDate" property="endDate" jdbcType="VARCHAR" />
         <result column="createTime" property="createTime" jdbcType="VARCHAR" />
