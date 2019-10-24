@@ -3,6 +3,7 @@ package com.letansuo.sportsback.biz.sports.controller;
 import com.github.pagehelper.PageInfo;
 import com.letansuo.sportsback.biz.sports.model.SportClassify;
 import com.letansuo.sportsback.biz.sports.service.SportClassifyService;
+import com.letansuo.sportsback.common.InitData;
 import com.letansuo.sportsback.common.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Map;
 
 @RestController
 @RequestMapping({"/sporttype"})
@@ -44,5 +47,11 @@ public class SportClassifyController
   public ResultVo delete(@PathVariable("typeid") Integer typeid) {
     this.service.deleteByPrimaryKey(typeid);
     return ResultVo.success();
+  }
+
+  @GetMapping({"/api"})
+  public ResultVo getSportClassify(){
+    Map<Integer,String> map = InitData.SprotClassifyMap;
+    return ResultVo.success(map);
   }
 }

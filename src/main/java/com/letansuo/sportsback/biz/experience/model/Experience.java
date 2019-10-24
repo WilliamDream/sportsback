@@ -1,5 +1,7 @@
 package com.letansuo.sportsback.biz.experience.model;
 
+import com.letansuo.sportsback.common.InitData;
+
 import javax.persistence.Transient;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -56,6 +58,15 @@ public class Experience {
 
     @Transient
     private String createEnd;
+
+    @Transient
+    private String sportClassify;
+
+    @Transient
+    private String clubName;
+
+    @Transient
+    private String priceStrategy;
 
     public Integer getExperienceId() {
         return experienceId;
@@ -255,5 +266,39 @@ public class Experience {
 
     public void setCreateEnd(String createEnd) {
         this.createEnd = createEnd;
+    }
+
+    public String getSportClassify() {
+        if(typeId!=null){
+            return InitData.SprotClassifyMap.get(typeId);
+        }
+        return sportClassify;
+    }
+
+    public void setSportClassify(String sportClassify) {
+
+        this.sportClassify = sportClassify;
+    }
+
+    public String getClubName() {
+        if(clubId!=null){
+            return InitData.ClubMap.get(clubId);
+        }
+        return clubName;
+    }
+
+    public void setClubName(String clubName) {
+        this.clubName = clubName;
+    }
+
+    public String getPriceStrategy() {
+        if(priceFlag!=null){
+            return InitData.PriceStrategyMap.get(priceFlag);
+        }
+        return priceStrategy;
+    }
+
+    public void setPriceStrategy(String priceStrategy) {
+        this.priceStrategy = priceStrategy;
     }
 }
