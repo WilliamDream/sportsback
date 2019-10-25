@@ -49,7 +49,7 @@ public class SportClassifyController
     return ResultVo.success();
   }
 
-  @GetMapping({"/api"})
+  @GetMapping({"/selectall"})
   public ResultVo getSportClassify(){
     Map<Integer,String> map = InitData.SprotClassifyMap;
     return ResultVo.success(map);

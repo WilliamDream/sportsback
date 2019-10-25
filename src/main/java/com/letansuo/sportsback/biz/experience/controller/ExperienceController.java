@@ -24,7 +24,7 @@ public class ExperienceController
   private ExperienceService service;
 
   @GetMapping({"/all"})
-  public ResultVo selectSportClassify(Experience experience)
+  public ResultVo selectExpricence(Experience experience)
   {
     PageInfo data = this.service.selectExpricence(experience);
     return ResultVo.success(data);

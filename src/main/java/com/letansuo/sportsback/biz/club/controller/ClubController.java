@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.PageInfo;
 import com.letansuo.sportsback.biz.club.model.Club;
 import com.letansuo.sportsback.biz.club.service.ClubService;
+import com.letansuo.sportsback.common.InitData;
 import com.letansuo.sportsback.common.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -48,5 +49,11 @@ public class ClubController
     public ResultVo delete(@PathVariable("clubid") Integer clubid) {
         this.service.deleteByPrimaryKey(clubid);
         return ResultVo.success();
+    }
+
+    @GetMapping({"/selectall"})
+    public ResultVo getClub(){
+        Map<Integer,String> map = InitData.ClubMap;
+        return ResultVo.success(map);
     }
 }

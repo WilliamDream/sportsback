@@ -25,7 +25,7 @@ public class Experience {
 
     private BigDecimal groupPrice;
 
-    private Byte priceFlag;
+    private Integer priceFlag;
 
     private String age;
 
@@ -140,11 +140,11 @@ public class Experience {
         this.groupPrice = groupPrice;
     }
 
-    public Byte getPriceFlag() {
+    public Integer getPriceFlag() {
         return priceFlag;
     }
 
-    public void setPriceFlag(Byte priceFlag) {
+    public void setPriceFlag(Integer priceFlag) {
         this.priceFlag = priceFlag;
     }
 
@@ -282,7 +282,8 @@ public class Experience {
 
     public String getClubName() {
         if(clubId!=null){
-            return InitData.ClubMap.get(clubId);
+            clubName = InitData.ClubMap.get(clubId);
+            return clubName;
         }
         return clubName;
     }
@@ -293,7 +294,8 @@ public class Experience {
 
     public String getPriceStrategy() {
         if(priceFlag!=null){
-            return InitData.PriceStrategyMap.get(priceFlag);
+            priceStrategy = InitData.PriceStrategyMap.get(priceFlag);
+            return priceStrategy;
         }
         return priceStrategy;
     }

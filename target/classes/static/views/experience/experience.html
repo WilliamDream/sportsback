@@ -18,13 +18,13 @@
             <div class="layui-inline">
                 <label class="layui-form-label">运动类型</label>
                 <div class="layui-input-inline">
-                    <select id="in_type" >
-                        <option value=""></option>
+                    <select id="in_sporttype" >
+                        <!--<option value=""></option>
                         <option value="0">篮球</option>
                         <option value="1">足球</option>
                         <option value="2">乒乓球</option>
                         <option value="3">羽毛球</option>
-                        <option value="4">游泳</option>
+                        <option value="4">游泳</option>-->
                     </select>
                 </div>
             </div>
@@ -114,11 +114,19 @@
         var laydate = layui.laydate;
         var total = 0;
 
+        var club_cache = "";
+        var sporttype_cache = "";
         laydate.render({
             elem: '#in_creattime',
             range: true
 
         });
+
+        //初始化俱乐部
+        getClubs();
+        //初始化运动
+        getSportClassify();
+
 
         //第一个实例
         table.render({
@@ -140,7 +148,7 @@
                 ,{field: 'bottomPrice', title: '最低价', width: 80 , fixed: 'center'}
                 ,{field: 'groupPrice', title: '团购价', width: 80, fixed: 'center'}
                 ,{field: 'priceStrategy', title: '价格展示', width: 100, fixed: 'left'}
-                ,{field: 'age', title: '年龄段', width:150, fixed: 'center'}
+                ,{field: 'age', title: '年龄段', width:100, fixed: 'center'}
                 ,{field: 'address', title: '地址', width:150, fixed: 'center'}
                 ,{field: 'status', title: '状态', width:150, fixed: 'center'}
                 ,{field: 'flag', title: '推荐指数', width:150, fixed: 'center'}
@@ -153,7 +161,6 @@
             ]]
             ,done:function (res,curr,count) {
                 total = res.count;
-                getClubs();
             }
             ,limit:10
             ,limits:[10,15,20]
@@ -178,19 +185,44 @@
         function getClubs() {
             var data = "{pageNum:1,pageSize:20}";
             $.ajax({
-                url:'/club/all/',
+                url:'/club/selectall/',
+                method:'get',
+                data:{pageNum:1,pageSize:20},
+                dataType:'JSON',
+                // contentType:'application/json',
+                success:function(res){
+                    debugger;
+                    if(res.code=='0'){
+                        var list = eval(res.data);
+                        var html = "<option value=''></option>";
+                        for(var p in list){
+                            html += "<option value='"+p+"'>"+list[p]+"</option>";
+                        }
+                        $("#in_club").append(html);
+                        club_cache = html;
+                    }
+
+                },
+            }) ;
+        }
+
+        function getSportClassify() {
+            var data = "{pageNum:1,pageSize:20}";
+            $.ajax({
+                url:'/sporttype/selectall/',
                 method:'get',
                 data:{pageNum:1,pageSize:20},
                 dataType:'JSON',
                 // contentType:'application/json',
                 success:function(res){
                     if(res.code=='0'){
-                        var list = res.data;
+                        var list = eval(res.data);
                         var html = "<option value=''></option>";
-                        for(var i=0;i<list.length;i++){
-                            html += "<option value='"+list[i].clubid+"'>"+list[i].clubname+"</option>";
+                        for(var p in list){
+                            html += "<option value='"+p+"'>"+list[p]+"</option>";
                         }
-                        $("#in_club").append(html);
+                        $("#in_sporttype").append(html);
+                        sporttype_cache = html;
                     }
 
                 },
@@ -201,7 +233,7 @@
         $('#btn_search').click(function () {
             var clubname = $('#clubname').val();
             table.reload('datatable', {
-                url:'/club/all',
+                url:'/experi/all',
                 where: {
                     clubname: clubname,
                 },

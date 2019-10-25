@@ -8,9 +8,9 @@
         <result column="clubId" property="clubId" jdbcType="INTEGER" />
         <result column="operatorId" property="operatorId" jdbcType="INTEGER" />
         <result column="price" property="price" jdbcType="DECIMAL" />
-        <result column="special_price" property="specialPrice" jdbcType="DECIMAL" />
-        <result column="bottom_price" property="bottomPrice" jdbcType="DECIMAL" />
-        <result column="group_price" property="groupPrice" jdbcType="DECIMAL" />
+        <result column="specialprice" property="specialPrice" jdbcType="DECIMAL" />
+        <result column="bottomprice" property="bottomPrice" jdbcType="DECIMAL" />
+        <result column="groupprice" property="groupPrice" jdbcType="DECIMAL" />
         <result column="priceflag" property="priceFlag" jdbcType="TINYINT" />
         <result column="age" property="age" jdbcType="VARCHAR" />
         <result column="address" property="address" jdbcType="VARCHAR" />
