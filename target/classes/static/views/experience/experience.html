@@ -199,6 +199,8 @@
                             html += "<option value='"+p+"'>"+list[p]+"</option>";
                         }
                         $("#in_club").append(html);
+                        //刷性select，显示出数据
+                        form.render("select");
                         club_cache = html;
                     }
 
@@ -222,6 +224,8 @@
                             html += "<option value='"+p+"'>"+list[p]+"</option>";
                         }
                         $("#in_sporttype").append(html);
+                        //刷性select，显示出数据
+                        form.render("select");
                         sporttype_cache = html;
                     }
 
@@ -315,10 +319,23 @@
         function showEditModel(data) {
             layer.open({
                 type: 1,
-                area: ['800px', '600px'],
-                title: data ? '编辑俱乐部' : '新增俱乐部',
+                area: ['100%', '100%'],
+                title: data ? '编辑体验课' : '新增体验课',
                 content: $('#club_form_html').html(),
-                btnAlign:'l'
+                btnAlign:'l',
+                maxmin: true,
+                success: function (layero, index) {
+                    $("#form_club").append(club_cache);
+                    $("#form_sporttype").append(sporttype_cache);
+                    lay('.form_date').each(function () {
+                        laydate.render({
+                            elem: this,
+                            trigger: 'click'
+                        });
+                    });
+                    //渲染下拉等控件
+                    form.render();
+                }
             });
         }
 
@@ -361,14 +378,51 @@
         </div>
         <div class="layui-form-item">
             <div class="layui-inline">
-                <label class="layui-form-label">负责人</label>
+                <label class="layui-form-label">运动类型</label>
                 <div class="layui-input-inline">
-                    <input name="charge" placeholder="请输入负责人" type="text" class="layui-input"
-                           maxlength="20" lay-verify="required" required/>
+                    <select name="typeId" id="form_sporttype" lay-verify="required" required>
+                        sporttype_cache
+                        <!--<option value=""></option>
+                        <option value="0">筹划中</option>
+                        <option value="1">报名中</option>
+                        <option value="2">进行中</option>
+                        <option value="3">已结束</option>
+                        <option value="4">已取消</option>
+                        <option value="5">已延期</option>-->
+                    </select>
                 </div>
             </div>
             <div class="layui-inline">
-                <label class="layui-form-label">电话号码</label>
+                <label class="layui-form-label">俱乐部</label>
+                <div class="layui-input-inline">
+                    <select name="clubId" id="form_club" lay-verify="required" required>
+                        sporttype_cache
+                        <!--<option value=""></option>
+                        <option value="0">筹划中</option>
+                        <option value="1">报名中</option>
+                        <option value="2">进行中</option>
+                        <option value="3">已结束</option>
+                        <option value="4">已取消</option>
+                        <option value="5">已延期</option>-->
+                    </select>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">课程状态</label>
+                <div class="layui-input-inline">
+                    <select name="status" id="form_status" lay-verify="required" required>
+                        <<option value=""></option>
+                        <option value="0">筹划中</option>
+                        <option value="1">报名中</option>
+                        <option value="2">进行中</option>
+                        <option value="3">已结束</option>
+                        <option value="4">已取消</option>
+                        <option value="5">已延期</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">推荐指数</label>
                 <div class="layui-input-inline">
                     <input name="mobile" placeholder="请输入电话号码" type="text" class="layui-input"
                            lay-verify="required" required/>
@@ -377,27 +431,89 @@
         </div>
         <div class="layui-form-item">
             <div class="layui-inline">
-                <label class="layui-form-label">微信号</label>
+                <label class="layui-form-label">价格</label>
                 <div class="layui-input-inline">
-                    <input name="wechat" placeholder="请输入微信号" type="text" class="layui-input"/>
+                    <input name="price" placeholder="请输入价格" type="text" class="layui-input"/>
                 </div>
             </div>
             <div class="layui-inline">
-                <label class="layui-form-label">是否VIP</label>
+                <label class="layui-form-label">特价</label>
                 <div class="layui-input-inline">
-                    <input type="radio" name="vipflag" value="1" title="是">
-                    <input type="radio" name="vipflag" value="0" title="否" checked>
+                    <input name="specialPrice" placeholder="请输入特价" type="text" class="layui-input"/>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">底价</label>
+                <div class="layui-input-inline">
+                    <input name="bottomPrice" placeholder="请输入底价" type="text" class="layui-input"/>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">团购价</label>
+                <div class="layui-input-inline">
+                    <input name="groupPrice" placeholder="请输入团购" type="text" class="layui-input"/>
                 </div>
             </div>
         </div>
         <div class="layui-form-item">
-            <label class="layui-form-label">俱乐部地址</label>
-            <div class="layui-input-block">
-                <input name="address" placeholder="请输入地址" type="text" class="layui-input"
-                       lay-verify="required" required/>
+            <div class="layui-inline">
+                <label class="layui-form-label">报名日期</label>
+                <div class="layui-input-inline" style="width: 100px;">
+                    <input type="text" name="signupStart" id="signup_min" placeholder="报名开始" autocomplete="off" class="layui-input form_date">
+                </div>
+                <div class="layui-form-mid">-</div>
+                <div class="layui-input-inline" style="width: 100px;">
+                    <input type="text" name="signupEnd" id="signup_max" placeholder="报名结束" autocomplete="off" class="layui-input form_date">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">课程日期</label>
+                <div class="layui-input-inline" style="width: 100px;">
+                    <input type="text" name="startDate" id="experi_min" placeholder="课程开始" autocomplete="off" class="layui-input form_date">
+                </div>
+                <div class="layui-form-mid">-</div>
+                <div class="layui-input-inline" style="width: 100px;">
+                    <input type="text" name="endDate" id="experi_max" placeholder="课程结束" autocomplete="off" class="layui-input form_date">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">课程地址</label>
+                <div class="layui-input-inline" style="width: 445px;">
+                    <input type="text" name="address"  autocomplete="off" class="layui-input">
+                </div>
             </div>
         </div>
         <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">年龄段</label>
+                <div class="layui-input-inline" style="width: 100px;">
+                    <input type="text" name="age_min" placeholder="岁" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-mid">-</div>
+                <div class="layui-input-inline" style="width: 100px;">
+                    <input type="text" name="age_max" placeholder="岁" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">招生数目</label>
+                <div class="layui-input-inline" style="width: 160px;">
+                    <input name="stuNumber" placeholder="请输入团购" type="text" class="layui-input"/>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">教练</label>
+                <div class="layui-input-inline">
+                    <input name="stuNumber" placeholder="请输入教练" type="text" class="layui-input"/>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">咨询电话</label>
+                <div class="layui-input-inline">
+                    <input name="phone" placeholder="请输入咨询电话" type="text" class="layui-input"/>
+                </div>
+            </div>
+        </div>
+        <!--<div class="layui-form-item">
             <label class="layui-form-label">俱乐部</label>
             <div class="layui-input-block">
                 <button type="button" class="layui-btn" id="btn_upload">
@@ -406,7 +522,7 @@
                 <input name="clubicon" type="hidden" value="" id="in_clubicon">
                 <img src="" style="width: 200px;height: 150px;" >
             </div>
-        </div>
+        </div>-->
 
         <div class="layui-form-item">
             <label class="layui-form-label">简介</label>

@@ -30,30 +30,38 @@
     <parameterMap id="Exprience" type="com.letansuo.sportsback.biz.experience.model.Experience"/>
 
     <sql id="where_all">
-        <if test="experienceId != null and experienceId !=''">
-            and experienceId = #{experienceId}
-        </if>
-        <if test="typeId != null and typeId !=''">
-            and typeId = #{typeId}
-        </if>
-        <if test="clubId != null and clubId !=''">
-            and clubId = #{clubId}
-        </if>
-        <if test="status != null and status !=''">
-            and status = #{status}
-        </if>
-        <if test="createStart != null and createStart !=''">
-            and createTime &gt;= #{createStart}
-        </if>
-        <if test="createEnd != null and createEnd !=''">
-            and createTime &lt;= #{createEnd}
-        </if>
+        <where>
+            <if test="experienceId != null and experienceId !=''">
+                and experienceId = #{experienceId}
+            </if>
+            <if test="typeId != null and typeId !=''">
+                and typeId = #{typeId}
+            </if>
+            <if test="clubId != null and clubId !=''">
+                and clubId = #{clubId}
+            </if>
+            <if test="status != null and status !=''">
+                and status = #{status}
+            </if>
+            <if test="signupStart != null and signupStart !=''">
+                and signupStart = #{signupStart}
+            </if>
+            <if test="signupEnd != null and signupEnd !=''">
+                and signupEnd = #{signupEnd}
+            </if>
+            <if test="createStart != null and createStart !=''">
+                and createTime &gt;= #{createStart}
+            </if>
+            <if test="createEnd != null and createEnd !=''">
+                and createTime &lt;= #{createEnd}
+            </if>
+        </where>
 
     </sql>
 
     <select id="selectExpricence" parameterMap="Exprience" resultMap="BaseResultMap" >
         select experienceId, name, typeId, clubId, operatorId, price, specialprice, bottomprice,
-        groupprice, priceflag, age, address, status, flag, teacher, phone, stunumber, createTime,
+        groupprice, priceflag, age, address, status, flag, teacher, phone, signupStart, signupEnd, startDate, endDate, stunumber, createTime,
         descrite
         from d_experience
         <include refid="where_all"/>
@@ -63,7 +71,7 @@
     <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
         select experienceId, name, typeId, clubId, operatorId, price, specialprice, bottomprice,
         groupprice, priceflag, age, address, status, flag, teacher, phone, stunumber, createTime,
-        descrite
+        descrite,signupEnd, startDate, startDate, stunumber
         from d_experience
         where experienceId = #{experienceId,jdbcType=INTEGER}
     </select>
@@ -73,14 +81,14 @@
         operatorId, price, specialprice,
         bottomprice, groupprice, priceflag,
         age, address, lng, lat, status,
-        flag, teacher, phone, startDate, endDate,
+        flag, teacher, phone, signupStart, signupEnd, startDate, endDate,
         stunumber, createTime, descrite
         )
         values (#{name,jdbcType=VARCHAR}, #{typeId,jdbcType=INTEGER}, #{clubId,jdbcType=INTEGER},
         #{operatorId,jdbcType=INTEGER}, #{price,jdbcType=DECIMAL}, #{specialPrice,jdbcType=DECIMAL},
         #{bottomPrice,jdbcType=DECIMAL}, #{groupPrice,jdbcType=DECIMAL}, #{priceFlag,jdbcType=TINYINT},
         #{age,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT}, #{lng,jdbcType=VARCHAR}, #{lat,jdbcType=VARCHAR},
-        #{flag,jdbcType=TINYINT}, #{teacher,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{startDate,jdbcType=VARCHAR}, #{endDate,jdbcType=VARCHAR},
+        #{flag,jdbcType=TINYINT}, #{teacher,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{signupStart,jdbcType=VARCHAR}, #{signupEnd,jdbcType=VARCHAR},#{startDate,jdbcType=VARCHAR}, #{endDate,jdbcType=VARCHAR},
         #{stuNumber,jdbcType=INTEGER}, #{createTime,jdbcType=VARCHAR}, #{descrite,jdbcType=LONGVARCHAR}
         )
     </insert>
@@ -138,6 +146,12 @@
         </if>
         <if test="stuNumber != null and stuNumber !=''">
             stunumber = #{stuNumber},
+        </if>
+        <if test="signupStart != null and signupStart !=''">
+            signupStart = #{signupStart},
+        </if>
+        <if test="signupEnd != null and signupEnd !=''">
+            signupEnd = #{signupEnd},
         </if>
         <if test="startDate != null and startDate !=''">
             startDate = #{startDate},

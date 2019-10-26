@@ -45,6 +45,10 @@ public class Experience {
 
     private Integer stuNumber;
 
+    private String signupStart;
+
+    private String signupEnd;
+
     private String startDate;
 
     private String endDate;
@@ -302,5 +306,21 @@ public class Experience {
 
     public void setPriceStrategy(String priceStrategy) {
         this.priceStrategy = priceStrategy;
+    }
+
+    public String getSignupStart() {
+        return signupStart;
+    }
+
+    public void setSignupStart(String signupStart) {
+        this.signupStart = signupStart;
+    }
+
+    public String getSignupEnd() {
+        return signupEnd;
+    }
+
+    public void setSignupEnd(String signupEnd) {
+        this.signupEnd = signupEnd;
     }
 }
