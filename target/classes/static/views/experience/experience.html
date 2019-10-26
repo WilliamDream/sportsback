@@ -326,13 +326,22 @@
                 maxmin: true,
                 success: function (layero, index) {
                     $("#form_sporttype").append(sporttype_cache);
-                    $("#form_date").append(club_cache);
+                    $("#form_club").append(club_cache);
                     $(".form_date").each(function () {
                         laydate.render({
                             elem: this,
                             trigger: 'click'
                         });
                     });
+                    layui.use('layedit', function(){
+                        var layedit = layui.layedit;
+                        layedit.build('form_descrite');
+                        layedit.build('form_descrite',{
+                            uploadImage:  {url: '/classimg/upload', type: 'post'},
+                            tool:['strong','italic','','','','','','','','','','','']
+                        });
+                    });
+                    //重新渲染控件
                     form.render();
                     /*var iframeWindow = window['layui-layer-iframe'+ index];
                     layero.find('iframe').contents().find('[id="form_sporttype"]').append(sporttype_cache);
@@ -536,9 +545,9 @@
         </div>-->
 
         <div class="layui-form-item">
-            <label class="layui-form-label">简介</label>
+            <label class="layui-form-label">课程详情</label>
             <div class="layui-input-block">
-                <textarea name="content" placeholder="请输入俱乐部简介" class="layui-textarea"></textarea>
+                <textarea name="descrite" id="form_descrite" placeholder="请输入课程详情" class="layui-textarea"></textarea>
             </div>
         </div>
 

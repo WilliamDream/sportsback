@@ -3,6 +3,7 @@ package com.letansuo.sportsback.biz.minisetup.controller;
 import com.github.pagehelper.PageInfo;
 import com.letansuo.sportsback.biz.minisetup.model.ClassImg;
 import com.letansuo.sportsback.biz.minisetup.service.ClassImgService;
+import com.letansuo.sportsback.common.vo.FileUploadVo;
 import com.letansuo.sportsback.common.vo.ResultVo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,6 +16,8 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @Author: WilliamDream
@@ -85,7 +88,12 @@ public class ClassImgController {
             logger.error("上传失败!原因是:",e);
             return ResultVo.error( "上传失败!");
         }
-        return ResultVo.success(path);
+        List<FileUploadVo> reslist = new ArrayList<>();
+        FileUploadVo fileUploadVo = new FileUploadVo();
+        fileUploadVo.setTitle(fileName);
+        fileUploadVo.setSrc(path);
+        reslist.add(fileUploadVo);
+        return ResultVo.success(reslist);
     }
 
     @PostMapping({"/update"})
