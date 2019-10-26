@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>体验课</title>
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all">
+</head>
+<body>
+<script src="../../layui/layui.js"></script>
+
+<div class="layui-tab">
+    <ul class="layui-tab-title">
+        <li class="layui-this">课程信息</li>
+        <li>课程详情</li>
+
+    </ul>
+    <div class="layui-tab-content">
+        <div class="layui-tab-item layui-show">
+            <form lay-filter="data_form" class="layui-form model-form">
+                <input name="clubid" type="hidden" value=""/>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">课程名</label>
+                    <div class="layui-input-block">
+                        <input name="name" placeholder="请输入课程名" type="text" class="layui-input"
+                               maxlength="20" lay-verify="required" required/>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">运动类型</label>
+                        <div class="layui-input-inline">
+                            <select name="typeId" id="form_sporttype" lay-verify="required" required>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">俱乐部</label>
+                        <div class="layui-input-inline">
+                            <select name="clubId" id="form_club" lay-verify="required" required>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">课程状态</label>
+                        <div class="layui-input-inline">
+                            <select name="status" id="form_status" lay-verify="required" required>
+                                <<option value=""></option>
+                                <option value="0">筹划中</option>
+                                <option value="1">报名中</option>
+                                <option value="2">进行中</option>
+                                <option value="3">已结束</option>
+                                <option value="4">已取消</option>
+                                <option value="5">已延期</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">推荐指数</label>
+                        <div class="layui-input-inline">
+                            <input name="mobile" placeholder="请输入电话号码" type="text" class="layui-input"
+                                   lay-verify="required" required/>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">价格</label>
+                        <div class="layui-input-inline">
+                            <input name="price" placeholder="请输入价格" type="text" class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">特价</label>
+                        <div class="layui-input-inline">
+                            <input name="specialPrice" placeholder="请输入特价" type="text" class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">底价</label>
+                        <div class="layui-input-inline">
+                            <input name="bottomPrice" placeholder="请输入底价" type="text" class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">团购价</label>
+                        <div class="layui-input-inline">
+                            <input name="groupPrice" placeholder="请输入团购" type="text" class="layui-input"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">报名日期</label>
+                        <div class="layui-input-inline" style="width: 100px;">
+                            <input type="text" name="signupStart" id="signup_min" placeholder="报名开始" autocomplete="off" class="layui-input form_date">
+                        </div>
+                        <div class="layui-form-mid">-</div>
+                        <div class="layui-input-inline" style="width: 100px;">
+                            <input type="text" name="signupEnd" id="signup_max" placeholder="报名结束" autocomplete="off" class="layui-input form_date">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">课程日期</label>
+                        <div class="layui-input-inline" style="width: 100px;">
+                            <input type="text" name="startDate" id="experi_min" placeholder="课程开始" autocomplete="off" class="layui-input form_date">
+                        </div>
+                        <div class="layui-form-mid">-</div>
+                        <div class="layui-input-inline" style="width: 100px;">
+                            <input type="text" name="endDate" id="experi_max" placeholder="课程结束" autocomplete="off" class="layui-input form_date">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">课程地址</label>
+                        <div class="layui-input-inline" style="width: 445px;">
+                            <input type="text" name="address"  autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">年龄段</label>
+                        <div class="layui-input-inline" style="width: 100px;">
+                            <input type="text" name="age_min" placeholder="岁" autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid">-</div>
+                        <div class="layui-input-inline" style="width: 100px;">
+                            <input type="text" name="age_max" placeholder="岁" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">招生数目</label>
+                        <div class="layui-input-inline" style="width: 160px;">
+                            <input name="stuNumber" placeholder="请输入团购" type="text" class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">教练</label>
+                        <div class="layui-input-inline">
+                            <input name="stuNumber" placeholder="请输入教练" type="text" class="layui-input"/>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">咨询电话</label>
+                        <div class="layui-input-inline">
+                            <input name="phone" placeholder="请输入咨询电话" type="text" class="layui-input"/>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="layui-form-item">
+                    <label class="layui-form-label">俱乐部</label>
+                    <div class="layui-input-block">
+                        <button type="button" class="layui-btn" id="btn_upload">
+                            <i class="layui-icon">&#xe67c;</i>上传图片
+                        </button>
+                        <input name="clubicon" type="hidden" value="" id="in_clubicon">
+                        <img src="" style="width: 200px;height: 150px;" >
+                    </div>
+                </div>-->
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">简介</label>
+                    <div class="layui-input-block">
+                        <textarea name="content" placeholder="请输入俱乐部简介" class="layui-textarea"></textarea>
+                    </div>
+                </div>
+
+                <div class="layui-form-item text-right">
+                    <button class="layui-btn layui-btn-primary" type="button" ew-event="closeDialog">取消</button>
+                    <button class="layui-btn" lay-filter="form_submit" lay-submit>保存</button>
+                </div>
+            </form>
+        </div>
+        <div class="layui-tab-item">内容2</div>
+        <div class="layui-tab-item">内容3</div>
+        <div class="layui-tab-item">内容4</div>
+        <div class="layui-tab-item">内容5</div>
+    </div>
+</div>
+
+
+<script type="text/html" id="toolbar">
+    <div class="layui-btn-container">
+        <button class="layui-btn layui-btn-sm" lay-event="detail">详情</button>
+        <button class="layui-btn layui-btn-sm" lay-event="update">编辑</button>
+        <button class="layui-btn layui-btn-sm" lay-event="delete">删除</button>
+    </div>
+</script>
+
+
+
+<script>
+    layui.use(['layer', 'form', 'util','upload', 'laydate','element'], function(){
+        var $ = layui.jquery;
+        var form = layui.form;
+        // var upload = layui.upload;
+        var laydate = layui.laydate;
+        var element = layui.element;
+
+        var club_cache = "";
+        var sporttype_cache = "";
+        laydate.render({
+            elem: '#in_creattime',
+            range: true
+
+        });
+
+        //初始化俱乐部
+        getClubs();
+        //初始化运动
+        getSportClassify();
+
+
+        
+        function getClubs() {
+            var data = "{pageNum:1,pageSize:20}";
+            $.ajax({
+                url:'/club/selectall/',
+                method:'get',
+                data:{pageNum:1,pageSize:20},
+                dataType:'JSON',
+                // contentType:'application/json',
+                success:function(res){
+                    debugger;
+                    if(res.code=='0'){
+                        var list = eval(res.data);
+                        var html = "<option value=''></option>";
+                        for(var p in list){
+                            html += "<option value='"+p+"'>"+list[p]+"</option>";
+                        }
+                        $("#in_club").append(html);
+                        //刷性select，显示出数据
+                        form.render("select");
+                        club_cache = html;
+                    }
+
+                },
+            }) ;
+        }
+
+        function getSportClassify() {
+            var data = "{pageNum:1,pageSize:20}";
+            $.ajax({
+                url:'/sporttype/selectall/',
+                method:'get',
+                data:{pageNum:1,pageSize:20},
+                dataType:'JSON',
+                // contentType:'application/json',
+                success:function(res){
+                    if(res.code=='0'){
+                        var list = eval(res.data);
+                        var html = "<option value=''></option>";
+                        for(var p in list){
+                            html += "<option value='"+p+"'>"+list[p]+"</option>";
+                        }
+                        $("#in_sporttype").append(html);
+                        //刷性select，显示出数据
+                        form.render("select");
+                        sporttype_cache = html;
+                    }
+
+                },
+            }) ;
+        }
+
+
+
+
+
+        //提交表单
+        layui.use('form', function(){
+            var form = layui.form;
+            //监听提交
+            form.on('submit(form_submit)', function(val){
+                var data =  val.field;
+                var clubid = data.clubid;
+                var url = clubid==''?'/club/add':'/club/update';
+                $.ajax({
+                    url:url,
+                    method:'post',
+                    data:JSON.stringify(data),
+                    dataType:'JSON',
+                    contentType:'application/json',
+                    success:function(res){
+                        if(res.code='0'){
+                            layer.alert(res.msg, {icon: 1});
+                        }
+                        else
+                            layer.alert(res.msg, {icon: 5});
+                    },
+                }) ;
+            });
+        });
+        //-------------
+
+
+        //上传图片
+        layui.use('upload', function() {
+            var upload = layui.upload;
+            var uploadInst = upload.render({
+                elem: '#btn_upload' //绑定元素
+                , url: '/classimg/upload' //上传接口
+                , done: function (res) {
+                    if (res.code == "0") {
+                        $("#in_clubicon").val(res.msg);
+                        layer.alert(res.msg, {icon: 1});
+                    } else {
+                        layer.alert(res.msg, {icon: 5});
+                    }
+
+                }
+                , error: function () {
+                    //请求异常回调
+                    layer.alert('上传失败', {icon: 5});
+                }
+            });
+        });
+
+    });
+</script>
+</body>
+
+<!-- 弹窗 -->
+<script type="text/html" id="club_form_html">
+
+</script>
+
+</html>
