@@ -24,11 +24,11 @@ public class ClassesController {
     public ResultVo selectSportClassify(Classes classes)
     {
         PageInfo data = this.service.selectClasses(classes);
-        return ResultVo.success(data.getList(),data.getTotal());
+        return ResultVo.success(data);
     }
     @GetMapping({"/{classid}"})
     public ResultVo select(@PathVariable("classid") Integer classid) {
-        return ResultVo.success(this.service.selectByPrimaryKey(classid),null);
+        return ResultVo.success(this.service.selectByPrimaryKey(classid));
     }
     @PostMapping({"/add"})
     public ResultVo add(@RequestBody Classes classes) {

@@ -5,15 +5,16 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class Classes {
-    private Integer classid;
+
+    private Integer classId;
 
     private String name;
 
-    private Integer typeid;
+    private Integer typeId;
 
-    private Integer clubid;
+    private Integer clubId;
 
-    private Integer operatorid;
+    private Integer operatorId;
 
     private BigDecimal price;
 
@@ -23,7 +24,7 @@ public class Classes {
 
     private BigDecimal groupPrice;
 
-    private Byte priceFlag;
+    private Integer priceFlag;
 
     private String age;
 
@@ -33,9 +34,9 @@ public class Classes {
 
     private String lat;
 
-    private Byte status;
+    private Integer status;
 
-    private Byte flag;
+    private Integer flag;
 
     private String teacher;
 
@@ -43,9 +44,9 @@ public class Classes {
 
     private Integer stuNumber;
 
-    private Date startdate;
+    private String startdate;
 
-    private Date enddate;
+    private String enddate;
 
     private String createtime;
 
@@ -57,13 +58,21 @@ public class Classes {
     @Transient
     private String createEnd;
 
+    @Transient
+    private String sportClassify;
 
-    public Integer getClassid() {
-        return classid;
+    @Transient
+    private String clubName;
+
+    @Transient
+    private String priceStrategy;
+
+    public Integer getClassId() {
+        return classId;
     }
 
-    public void setClassid(Integer classid) {
-        this.classid = classid;
+    public void setClassId(Integer classId) {
+        this.classId = classId;
     }
 
     public String getName() {
@@ -74,28 +83,28 @@ public class Classes {
         this.name = name;
     }
 
-    public Integer getTypeid() {
-        return typeid;
+    public Integer getTypeId() {
+        return typeId;
     }
 
-    public void setTypeid(Integer typeid) {
-        this.typeid = typeid;
+    public void setTypeId(Integer typeId) {
+        this.typeId = typeId;
     }
 
-    public Integer getClubid() {
-        return clubid;
+    public Integer getClubId() {
+        return clubId;
     }
 
-    public void setClubid(Integer clubid) {
-        this.clubid = clubid;
+    public void setClubId(Integer clubId) {
+        this.clubId = clubId;
     }
 
-    public Integer getOperatorid() {
-        return operatorid;
+    public Integer getOperatorId() {
+        return operatorId;
     }
 
-    public void setOperatorid(Integer operatorid) {
-        this.operatorid = operatorid;
+    public void setOperatorId(Integer operatorId) {
+        this.operatorId = operatorId;
     }
 
     public BigDecimal getPrice() {
@@ -130,11 +139,11 @@ public class Classes {
         this.groupPrice = groupPrice;
     }
 
-    public Byte getPriceFlag() {
+    public Integer getPriceFlag() {
         return priceFlag;
     }
 
-    public void setPriceFlag(Byte priceFlag) {
+    public void setPriceFlag(Integer priceFlag) {
         this.priceFlag = priceFlag;
     }
 
@@ -170,19 +179,19 @@ public class Classes {
         this.lat = lat;
     }
 
-    public Byte getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(Byte status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
-    public Byte getFlag() {
+    public Integer getFlag() {
         return flag;
     }
 
-    public void setFlag(Byte flag) {
+    public void setFlag(Integer flag) {
         this.flag = flag;
     }
 
@@ -210,19 +219,19 @@ public class Classes {
         this.stuNumber = stuNumber;
     }
 
-    public Date getStartdate() {
+    public String getStartdate() {
         return startdate;
     }
 
-    public void setStartdate(Date startdate) {
+    public void setStartdate(String startdate) {
         this.startdate = startdate;
     }
 
-    public Date getEnddate() {
+    public String getEnddate() {
         return enddate;
     }
 
-    public void setEnddate(Date enddate) {
+    public void setEnddate(String enddate) {
         this.enddate = enddate;
     }
 
@@ -256,5 +265,29 @@ public class Classes {
 
     public void setCreateEnd(String createEnd) {
         this.createEnd = createEnd;
+    }
+
+    public String getSportClassify() {
+        return sportClassify;
+    }
+
+    public void setSportClassify(String sportClassify) {
+        this.sportClassify = sportClassify;
+    }
+
+    public String getClubName() {
+        return clubName;
+    }
+
+    public void setClubName(String clubName) {
+        this.clubName = clubName;
+    }
+
+    public String getPriceStrategy() {
+        return priceStrategy;
+    }
+
+    public void setPriceStrategy(String priceStrategy) {
+        this.priceStrategy = priceStrategy;
     }
 }

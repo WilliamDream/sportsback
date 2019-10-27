@@ -20,7 +20,7 @@
     <result column="flag" property="flag" jdbcType="TINYINT" />
     <result column="teacher" property="teacher" jdbcType="VARCHAR" />
     <result column="phone" property="phone" jdbcType="VARCHAR" />
-    <result column="stu_number" property="stuNumber" jdbcType="INTEGER" />
+    <result column="stuNumber" property="stuNumber" jdbcType="INTEGER" />
     <result column="startDate" property="startdate" jdbcType="TIMESTAMP" />
     <result column="endDate" property="enddate" jdbcType="TIMESTAMP" />
     <result column="createtime" property="createtime" jdbcType="VARCHAR" />
@@ -30,30 +30,35 @@
   <parameterMap id="Classes" type="com.letansuo.sportsback.biz.classes.model.Classes"/>
 
   <sql id="where_all">
-    <if test="experienceid != null and experienceid !=''">
-      and experienceid = #{experienceid}
-    </if>
-    <if test="typeid != null and typeid !=''">
-      and typeid = #{typeid}
-    </if>
-    <if test="clubid != null and clubid !=''">
-      and clubid = #{clubid}
-    </if>
-    <if test="status != null and status !=''">
-      and status = #{status}
-    </if>
-    <if test="createStart != null and createStart !=''">
-      and createtime &gt; #{createStart}
-    </if>
-    <if test="createEnd != null and createEnd !=''">
-      and createtime &lt; #{createEnd}
-    </if>
+    <where>
+      <if test="name != null and name !=''">
+        and name like #{name}"%"
+      </if>
+      <if test="classId != null and classId !=''">
+        and classId = #{classId}
+      </if>
+      <if test="typeId != null and typeId !=''">
+        and typeId = #{typeId}
+      </if>
+      <if test="clubId != null and clubId !=''">
+        and clubId = #{clubId}
+      </if>
+      <if test="status != null and status !=''">
+        and status = #{status}
+      </if>
+      <if test="createStart != null and createStart !=''">
+        and createtime &gt; #{createStart}
+      </if>
+      <if test="createEnd != null and createEnd !=''">
+        and createtime &lt; #{createEnd}
+      </if>
+    </where>
 
   </sql>
 
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select classId, name, typeId, clubId, operatorId, price, special_price, bottom_price,
-    group_price, price_flag, age, address, lng, lat, status, flag, teacher, phone, stu_number,
+    group_price, price_flag, age, address, lng, lat, status, flag, teacher, phone, stuNumber,
     startDate, endDate, createtime, descrite
     from d_class
     where classId = #{classid,jdbcType=INTEGER}
@@ -62,7 +67,7 @@
 
   <select id="selectClasses" parameterMap="Classes" resultMap="BaseResultMap" >
     select classId, name, typeId, clubId, operatorId, price, special_price, bottom_price,
-    group_price, price_flag, age, address, lng, lat, status, flag, teacher, phone, stu_number,
+    group_price, price_flag, age, address, lng, lat, status, flag, teacher, phone, stuNumber,
     startDate, endDate, createtime, descrite
     from d_class
     <include refid="where_all"/>
@@ -75,7 +80,7 @@
       bottom_price, group_price, price_flag, 
       age, address, lng, 
       lat, status, flag, 
-      teacher, phone, stu_number, 
+      teacher, phone, stuNumber, signupStart, signupEnd,
       startDate, endDate, createtime, 
       descriterite)
     values (#{name,jdbcType=VARCHAR}, #{typeid,jdbcType=INTEGER}, #{clubid,jdbcType=INTEGER}, 
@@ -83,7 +88,7 @@
       #{bottomPrice,jdbcType=DECIMAL}, #{groupPrice,jdbcType=DECIMAL}, #{priceFlag,jdbcType=TINYINT}, 
       #{age,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{lng,jdbcType=VARCHAR}, 
       #{lat,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT}, #{flag,jdbcType=TINYINT}, 
-      #{teacher,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{stuNumber,jdbcType=INTEGER}, 
+      #{teacher,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{stuNumber,jdbcType=INTEGER}, #{signupStart,jdbcType=VARCHAR}, #{signupEnd,jdbcType=VARCHAR},
       #{startdate,jdbcType=TIMESTAMP}, #{enddate,jdbcType=TIMESTAMP}, #{createtime,jdbcType=VARCHAR}, 
       #{descrite,jdbcType=LONGVARCHAR})
   </insert>
@@ -141,7 +146,7 @@
         phone = #{phone},
       </if>
       <if test="stuNumber != null and stuNumber !=''">
-        stu_number = #{stuNumber},
+        stuNumber = #{stuNumber},
       </if>
       <if test="startDate != null and startDate !=''">
         startDate = #{startDate},

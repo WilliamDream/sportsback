@@ -117,8 +117,6 @@
         //对工具条监听
         table.on('tool(list)', function(obj){ //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
             var data = obj.data;        //获得当前行数据
-
-            debugger;
             var layEvent = obj.event;   //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
             var tr = obj.tr;            //获得当前行 tr 的 DOM 对象（如果有的话）
             if(layEvent === 'detail'){ //查看
@@ -134,7 +132,6 @@
                         dataType:'JSON',
                         // contentType:'application/json',
                         success:function(res){
-                            debugger
                             if(res.code='0'){
                                 layer.alert(res.msg, {icon: 1});
                             }
@@ -145,6 +142,7 @@
                 });
             } else if(layEvent === 'update'){ //编辑
                 showEditModel();
+                $("#img_clubicon").attr('src',data.clubicon);
                 //回显数据
                 form.val('data_form',data);
             } else if(layEvent === 'add'){  //新增
@@ -199,18 +197,17 @@
         function initTips() {
             //上传图片
             layui.use('upload', function() {
-                debugger;
                 var upload = layui.upload;
                 var uploadInst = upload.render({
                     elem: '#btn_upload' //绑定元素
-                    , url: '/classimg/upload' //上传接口
+                    ,url: '/classimg/upload' //上传接口
                     ,accept:'images'
                     ,data: {"filename":"classimgs"}
                     , done: function (res) {
                         debugger
                         if (res.code == "0") {
-                            $("#in_clubicon").val(res.msg);
-                            $("#img_clubicon").attr('src',res.msg);
+                            $("#in_clubicon").val(res.data.src);
+                            $("#img_clubicon").attr('src',res.data.src);
                             layer.alert(res.msg, {icon: 1});
                         } else {
                             layer.alert(res.msg, {icon: 5});
@@ -286,7 +283,7 @@
                     <i class="layui-icon">&#xe67c;</i>上传图片
                 </button>
                 <input name="clubicon" type="hidden" value="" id="in_clubicon">
-                <img src="" style="width: 200px;height: 150px;" id="img_clubicon">
+                <img  src="" style="width: 200px;height: 150px;" id="img_clubicon">
             </div>
         </div>
 

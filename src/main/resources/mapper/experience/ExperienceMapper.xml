@@ -31,6 +31,9 @@
 
     <sql id="where_all">
         <where>
+            <if test="name != null and name !=''">
+                and name like #{name}"%"
+            </if>
             <if test="experienceId != null and experienceId !=''">
                 and experienceId = #{experienceId}
             </if>

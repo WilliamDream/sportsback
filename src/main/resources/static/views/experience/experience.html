@@ -48,13 +48,13 @@
             <div class="layui-inline">
                 <label class="layui-form-label">创建时间始</label>
                 <div class="layui-input-inline">
-                    <input type="text" name="createStart" class="layui-input" id="in_creatstart">
+                    <input type="text" name="createStart" class="layui-input fotm_date" id="in_creatstart">
                 </div>
             </div>
             <div class="layui-inline">
                 <label class="layui-form-label">创建时间止</label>
                 <div class="layui-input-inline">
-                    <input type="text" name="createEnd" class="layui-input" id="">
+                    <input type="text" name="createEnd" class="layui-input fotm_date" id="in_createend">
                 </div>
             </div>
             <div class="layui-inline">
@@ -104,11 +104,14 @@
 
         var club_cache = "";
         var sporttype_cache = "";
-        laydate.render({
-            elem: '#in_creattime',
-            range: true
+        $('.fotm_date').each(function () {
+            laydate.render({
+                elem: this,
+                trigger: 'click'
 
-        });
+            });
+        })
+
 
         //初始化俱乐部
         getClubs();
@@ -227,7 +230,13 @@
             var in_club = $("#in_club").val();
             var in_status = $("#in_status").val();
             var in_creatstart = $("#in_creatstart").val();
+            if(in_creatstart!=''){
+                in_creatstart = in_creatstart + " 00:00:00";
+            }
             var in_createend = $("#in_createend").val();
+            if(in_createend!=''){
+                in_createend = in_createend + " 23:59:59";
+            }
             table.reload('datatable', {
                 url:'/experi/all',
                 where: {
@@ -235,8 +244,8 @@
                     typeId: in_sporttype,
                     clubId: in_club,
                     status: in_status,
-
-
+                    createStart: in_creatstart,
+                    createEnd: in_createend,
                 },
                 page : {
                     curr : 1
@@ -366,9 +375,13 @@
             var uploadInst = upload.render({
                 elem: '#btn_upload' //绑定元素
                 , url: '/classimg/upload' //上传接口
+                ,accept:'images'
+                ,data: {"filename":"classimgs"}
                 , done: function (res) {
+                    debugger
                     if (res.code == "0") {
-                        $("#in_clubicon").val(res.msg);
+                        $("#in_clubicon").val(res.data.src);
+                        $("#img_clubicon").attr('src',res.data.src);
                         layer.alert(res.msg, {icon: 1});
                     } else {
                         layer.alert(res.msg, {icon: 5});

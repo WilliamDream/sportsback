@@ -60,17 +60,19 @@ public class ClassImgController {
         if (!fileName.matches("^.+\\.(?i)(jpg)$") && !fileName.matches("^.+\\.(?i)(png)$")) {
             return ResultVo.error("1", "上传图片格式错误，请上传后缀为.jpg .png  .gif的文件");
         }
+        File f = new File(this.getClass().getResource("/").getPath()+"/static/upfile");
         String wenjian = "";
         if(!StringUtils.isEmpty(request.getParameter("filename"))){
-            wenjian = request.getParameter("filename") + "/";
+            wenjian = request.getParameter("filename") + "\\";
         }
-        fileName = new String(wenjian.getBytes("UTF-8"), "UTF-8");
+        wenjian = new String(wenjian.getBytes("UTF-8"), "UTF-8");
         String filePath = "";
         String os =System.getProperty("os.name");
         if(os.equalsIgnoreCase("linux")) {
-            filePath = "/tmp/import/upload/"+wenjian;
+            filePath = f.getPath() + "/"+ wenjian;
         }else {
-            filePath = "D:/tmp/import/upload/"+wenjian;
+            filePath = f.getPath() + "\\"+ wenjian;
+            filePath = "D:/tmp/import/upload/"+ wenjian;
         }
 
         String path = filePath + fileName;
@@ -88,12 +90,12 @@ public class ClassImgController {
             logger.error("上传失败!原因是:",e);
             return ResultVo.error( "上传失败!");
         }
-        List<FileUploadVo> reslist = new ArrayList<>();
+//        List<FileUploadVo> reslist = new ArrayList<>();
         FileUploadVo fileUploadVo = new FileUploadVo();
         fileUploadVo.setTitle(fileName);
         fileUploadVo.setSrc(path);
-        reslist.add(fileUploadVo);
-        return ResultVo.success(reslist);
+//        reslist.add(fileUploadVo);
+        return ResultVo.success(fileUploadVo);
     }
 
     @PostMapping({"/update"})
@@ -107,6 +109,11 @@ public class ClassImgController {
         return ResultVo.success();
     }
 
+    public static void main(String[] args) {
+
+
+
+    }
 
 
 }
