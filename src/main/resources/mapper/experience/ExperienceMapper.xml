@@ -81,15 +81,15 @@
         operatorId, price, specialprice,
         bottomprice, groupprice, priceflag,
         age, address, lng, lat, status,
-        flag, teacher, phone, signupStart, signupEnd, startDate, endDate,
-        stunumber, createTime, descrite
+        flag, teacher, phone, signupStart, signupEnd,
+        startDate, endDate, stunumber, createTime, descrite
         )
         values (#{name,jdbcType=VARCHAR}, #{typeId,jdbcType=INTEGER}, #{clubId,jdbcType=INTEGER},
         #{operatorId,jdbcType=INTEGER}, #{price,jdbcType=DECIMAL}, #{specialPrice,jdbcType=DECIMAL},
         #{bottomPrice,jdbcType=DECIMAL}, #{groupPrice,jdbcType=DECIMAL}, #{priceFlag,jdbcType=TINYINT},
-        #{age,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT}, #{lng,jdbcType=VARCHAR}, #{lat,jdbcType=VARCHAR},
-        #{flag,jdbcType=TINYINT}, #{teacher,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{signupStart,jdbcType=VARCHAR}, #{signupEnd,jdbcType=VARCHAR},#{startDate,jdbcType=VARCHAR}, #{endDate,jdbcType=VARCHAR},
-        #{stuNumber,jdbcType=INTEGER}, #{createTime,jdbcType=VARCHAR}, #{descrite,jdbcType=LONGVARCHAR}
+        #{age,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{lng,jdbcType=VARCHAR}, #{lat,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT},
+        #{flag,jdbcType=TINYINT}, #{teacher,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{signupStart,jdbcType=VARCHAR}, #{signupEnd,jdbcType=VARCHAR},
+        #{startDate,jdbcType=VARCHAR}, #{endDate,jdbcType=VARCHAR}, #{stuNumber,jdbcType=INTEGER}, #{createTime,jdbcType=VARCHAR}, #{descrite,jdbcType=LONGVARCHAR}
         )
     </insert>
 

@@ -19,12 +19,6 @@
                 <label class="layui-form-label">运动类型</label>
                 <div class="layui-input-inline">
                     <select id="in_sporttype" >
-                        <!--<option value=""></option>
-                        <option value="0">篮球</option>
-                        <option value="1">足球</option>
-                        <option value="2">乒乓球</option>
-                        <option value="3">羽毛球</option>
-                        <option value="4">游泳</option>-->
                     </select>
                 </div>
             </div>
@@ -32,12 +26,6 @@
                 <label class="layui-form-label">俱乐部</label>
                 <div class="layui-input-inline">
                     <select id="in_club" >
-                        <!--<option value=""></option>
-                        <option value="0">北京</option>
-                        <option value="1">上海</option>
-                        <option value="2">广州</option>
-                        <option value="3">深圳</option>
-                        <option value="4">杭州</option>-->
                     </select>
                 </div>
             </div>
@@ -60,13 +48,13 @@
             <div class="layui-inline">
                 <label class="layui-form-label">创建时间始</label>
                 <div class="layui-input-inline">
-                    <input type="text" class="layui-input" id="in_creatstart">
+                    <input type="text" name="createStart" class="layui-input" id="in_creatstart">
                 </div>
             </div>
             <div class="layui-inline">
                 <label class="layui-form-label">创建时间止</label>
                 <div class="layui-input-inline">
-                    <input type="text" class="layui-input" id="in_creatend">
+                    <input type="text" name="createEnd" class="layui-input" id="">
                 </div>
             </div>
             <div class="layui-inline">
@@ -234,11 +222,21 @@
 
         //查询
         $('#btn_search').click(function () {
-            var clubname = $('#clubname').val();
+            var in_name = $('#in_name').val();
+            var in_sporttype = $("#in_sporttype").val();
+            var in_club = $("#in_club").val();
+            var in_status = $("#in_status").val();
+            var in_creatstart = $("#in_creatstart").val();
+            var in_createend = $("#in_createend").val();
             table.reload('datatable', {
                 url:'/experi/all',
                 where: {
-                    clubname: clubname,
+                    name: in_name,
+                    typeId: in_sporttype,
+                    clubId: in_club,
+                    status: in_status,
+                    
+
                 },
                 page : {
                     curr : 1
