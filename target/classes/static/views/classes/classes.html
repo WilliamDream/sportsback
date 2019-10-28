@@ -123,7 +123,7 @@
         table.render({
             elem: '#datatable'
             ,height: 312
-            ,url: '/experi/all' //数据接口
+            ,url: '/class/all' //数据接口
             ,page: true //开启分页
             ,request: {
                 pageName: 'pageNum', //页码的参数名称，默认：page
@@ -148,7 +148,7 @@
                 ,{field: 'startDate', title: '开始日期', width:150, fixed: 'center'}
                 ,{field: 'endDate', title: '结束日期', width:150, fixed: 'center'}
                 ,{field: 'createTime', title: '发布日期', width:150, fixed: 'center'}
-                ,{fixed: 'left', title: '操作', align:'center', toolbar: '#toolbar'}
+                ,{fixed: 'right', title: '操作', align:'center', toolbar: '#toolbar'}
             ]]
             ,done:function (res,curr,count) {
                 total = res.count;
@@ -238,7 +238,7 @@
                 in_createend = in_createend + " 23:59:59";
             }
             table.reload('datatable', {
-                url:'/experi/all',
+                url:'/class/all',
                 where: {
                     name: in_name,
                     typeId: in_sporttype,
@@ -286,6 +286,9 @@
             } else if(layEvent === 'update'){ //编辑
                 showEditModel();
                 //回显数据
+                var ages = data.age.split("-");
+                $("input[name='age_min']").val(ages[0]);
+                $("input[name='age_max']").val(ages[1]);
                 form.val('data_form',data);
             } else if(layEvent === 'add'){  //新增
 

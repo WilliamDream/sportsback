@@ -8,10 +8,10 @@
     <result column="clubId" property="clubid" jdbcType="INTEGER" />
     <result column="operatorId" property="operatorid" jdbcType="INTEGER" />
     <result column="price" property="price" jdbcType="DECIMAL" />
-    <result column="special_price" property="specialPrice" jdbcType="DECIMAL" />
-    <result column="bottom_price" property="bottomPrice" jdbcType="DECIMAL" />
-    <result column="group_price" property="groupPrice" jdbcType="DECIMAL" />
-    <result column="price_flag" property="priceFlag" jdbcType="TINYINT" />
+    <result column="specialPrice" property="specialPrice" jdbcType="DECIMAL" />
+    <result column="bottomPrice" property="bottomPrice" jdbcType="DECIMAL" />
+    <result column="groupPrice" property="groupPrice" jdbcType="DECIMAL" />
+    <result column="priceFlag" property="priceFlag" jdbcType="TINYINT" />
     <result column="age" property="age" jdbcType="VARCHAR" />
     <result column="address" property="address" jdbcType="VARCHAR" />
     <result column="lng" property="lng" jdbcType="VARCHAR" />
@@ -57,8 +57,8 @@
   </sql>
 
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select classId, name, typeId, clubId, operatorId, price, special_price, bottom_price,
-    group_price, price_flag, age, address, lng, lat, status, flag, teacher, phone, stuNumber,
+    select classId, name, typeId, clubId, operatorId, price, specialPrice, bottomPrice,
+    groupPrice, priceFlag, age, address, lng, lat, status, flag, teacher, phone, stuNumber,
     startDate, endDate, createtime, descrite
     from d_class
     where classId = #{classid,jdbcType=INTEGER}
@@ -66,8 +66,8 @@
 
 
   <select id="selectClasses" parameterMap="Classes" resultMap="BaseResultMap" >
-    select classId, name, typeId, clubId, operatorId, price, special_price, bottom_price,
-    group_price, price_flag, age, address, lng, lat, status, flag, teacher, phone, stuNumber,
+    select classId, name, typeId, clubId, operatorId, price, specialPrice, bottomPrice,
+    groupPrice, priceFlag, age, address, lng, lat, status, flag, teacher, phone, stuNumber,
     startDate, endDate, createtime, descrite
     from d_class
     <include refid="where_all"/>
@@ -76,12 +76,12 @@
 
   <insert id="insert" parameterMap="Classes" useGeneratedKeys="true" keyProperty="classid" >
     insert into d_class (name, typeId, clubId, 
-      operatorId, price, special_price, 
-      bottom_price, group_price, price_flag, 
+      operatorId, price, specialPrice, 
+      bottomPrice, groupPrice, priceFlag, 
       age, address, lng, 
       lat, status, flag, 
       teacher, phone, stuNumber, signupStart, signupEnd,
-      startDate, endDate, createtime, 
+      signupStart, signupEnd, startDate, endDate, createtime,
       descriterite)
     values (#{name,jdbcType=VARCHAR}, #{typeid,jdbcType=INTEGER}, #{clubid,jdbcType=INTEGER}, 
       #{operatorid,jdbcType=INTEGER}, #{price,jdbcType=DECIMAL}, #{specialPrice,jdbcType=DECIMAL}, 
@@ -89,7 +89,7 @@
       #{age,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{lng,jdbcType=VARCHAR}, 
       #{lat,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT}, #{flag,jdbcType=TINYINT}, 
       #{teacher,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{stuNumber,jdbcType=INTEGER}, #{signupStart,jdbcType=VARCHAR}, #{signupEnd,jdbcType=VARCHAR},
-      #{startdate,jdbcType=TIMESTAMP}, #{enddate,jdbcType=TIMESTAMP}, #{createtime,jdbcType=VARCHAR}, 
+      #{signupStart,jdbcType=VARCHAR}, #{signupEnd,jdbcType=VARCHAR}, #{startdate,jdbcType=TIMESTAMP}, #{enddate,jdbcType=TIMESTAMP}, #{createtime,jdbcType=VARCHAR},
       #{descrite,jdbcType=LONGVARCHAR})
   </insert>
 
@@ -113,13 +113,13 @@
         price = #{price},
       </if>
       <if test="specialPrice != null and specialPrice !=''">
-        special_price = #{specialPrice},
+        specialPrice = #{specialPrice},
       </if>
       <if test="bottomPrice != null and bottomPrice !=''">
-        bottom_price = #{bottomPrice},
+        bottomPrice = #{bottomPrice},
       </if>
       <if test="groupPrice != null and groupPrice !=''">
-        group_price = #{groupPrice},
+        groupPrice = #{groupPrice},
       </if>
       <if test="age != null and age !=''">
         age = #{age},
