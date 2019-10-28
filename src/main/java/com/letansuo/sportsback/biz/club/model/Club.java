@@ -6,6 +6,7 @@ public class Club extends BaseEntity
 {
   private Integer clubid;
   private String clubname;
+  private String name;
   private String clubicon;
   private String charge;
   private String mobile;
@@ -33,6 +34,14 @@ public class Club extends BaseEntity
 
   public void setClubname(String clubname) {
     this.clubname = clubname;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
   }
 
   public String getClubicon() {
