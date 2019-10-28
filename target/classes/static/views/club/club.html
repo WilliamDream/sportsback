@@ -11,7 +11,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">俱乐部名</label>
             <div class="layui-input-inline">
-                <input type="text" id="clubname"  placeholder="请输入俱乐部名" autocomplete="off" class="layui-input">
+                <input type="text" id="in_name"  placeholder="请输入俱乐部名" autocomplete="off" class="layui-input">
             </div>
             <button type="button" class="layui-btn layui-btn-normal" lay-filter="btn_query" id="btn_search" lay-submit>
                 <i class="layui-icon">&#xe615;</i>查询
@@ -64,6 +64,7 @@
             ,cols: [[ //表头
                 {field: '', title: '序号', width:80, sort: true, fixed: 'center'}
                 ,{field: 'clubname', title: '俱乐部名', width:200, fixed: 'left'}
+                ,{field: 'name', title: '简称', width:100, fixed: 'left'}
                 ,{field: 'clubicon', title: 'logo', width:80, fixed: 'center'}
                 ,{field: 'charge', title: '负责人', width:80, fixed: 'center'}
                 ,{field: 'mobile', title: '电话', width:150, fixed: 'center'}
@@ -98,11 +99,11 @@
 
         //查询
         $('#btn_search').click(function () {
-            var clubname = $('#clubname').val();
+            var name = $('#in_name').val();
             table.reload('datatable', {
                 url:'/club/all',
                 where: {
-                    clubname: clubname,
+                    name: name,
                 },
                 page : {
                     curr : 1
@@ -240,6 +241,22 @@
         </div>
         <div class="layui-form-item">
             <div class="layui-inline">
+                <label class="layui-form-label">俱乐部简称</label>
+                <div class="layui-input-inline">
+                    <input name="name" placeholder="请输入俱乐部简称" type="text" class="layui-input"
+                           maxlength="20" lay-verify="required" required/>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">是否VIP</label>
+                <div class="layui-input-inline">
+                    <input type="radio" name="vipflag" value="1" title="是">
+                    <input type="radio" name="vipflag" value="0" title="否" checked>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
                 <label class="layui-form-label">负责人</label>
                 <div class="layui-input-inline">
                     <input name="charge" placeholder="请输入负责人" type="text" class="layui-input"
@@ -261,13 +278,7 @@
                     <input name="wechat" placeholder="请输入微信号" type="text" class="layui-input"/>
                 </div>
             </div>
-            <div class="layui-inline">
-                <label class="layui-form-label">是否VIP</label>
-                <div class="layui-input-inline">
-                    <input type="radio" name="vipflag" value="1" title="是">
-                    <input type="radio" name="vipflag" value="0" title="否" checked>
-                </div>
-            </div>
+
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">俱乐部地址</label>
