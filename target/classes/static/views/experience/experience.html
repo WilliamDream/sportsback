@@ -87,11 +87,23 @@
     </div>
 </script>
 
-<script type="text/html" id="vip_temp">
-    {{#  if(d.vipflag == 0){ }}
-        <text text-align="center">否</text>
-    {{#  } else if(d.vipflag == 1){ }}
-        是
+    <script type="text/html" id="index_temp">
+        {{d.LAY_TABLE_INDEX+1}}
+    </script>
+
+<script type="text/html" id="status_temp">
+    {{#  if(d.status == 0){ }}
+        筹划中
+    {{#  } else if(d.status == 1){ }}
+        报名中
+    {{#  } else if(d.status == 2){ }}
+        进行中
+    {{#  } else if(d.status == 3){ }}
+        已结束
+    {{#  } else if(d.status == 4){ }}
+        已取消
+    {{#  } else if(d.status == 5){ }}
+        已延迟
     {{#  } }}
 </script>
 
@@ -104,6 +116,9 @@
         // var upload = layui.upload;
         var laydate = layui.laydate;
         var total = 0;
+        //富文本编辑器`
+        var layedit;
+        var textarea_index = 0;
 
         var club_cache = "";
         var sporttype_cache = "";
@@ -127,6 +142,7 @@
             elem: '#datatable'
             // ,width: '1000'
             ,height: 'full-200'
+            ,cellMinWidth: 80
             ,url: '/experi/all' //数据接口
             ,page: true //开启分页
             ,request: {
@@ -134,7 +150,7 @@
                 limitName: 'pageSize' //每页数据量的参数名，默认：limit
             }
             ,cols: [[ //表头
-                {field: 'index', title: '序号', width:80, sort: true, fixed: 'center'}
+                {type: 'numbers', title: '序号', width:80, sort: true, fixed: 'center',templet:'#index_temp'}
                 ,{field: 'name', title: '课程名', width:200, fixed: 'left'}
                 ,{field: 'sportClassify', title: '类型', width:80, fixed: 'center'}
                 ,{field: 'clubName', title: '俱乐部', width:200, fixed: 'center'}
@@ -145,7 +161,7 @@
                 ,{field: 'priceStrategy', title: '价格展示', width: 100, fixed: 'left'}
                 ,{field: 'age', title: '年龄段', width:100, fixed: 'center'}
                 ,{field: 'address', title: '地址', width:150, fixed: 'center'}
-                ,{field: 'status', title: '状态', width:150, fixed: 'center'}
+                ,{field: 'status', title: '课程状态', width:150, fixed: 'center',templet: '#status_temp'}
                 ,{field: 'flag', title: '推荐指数', width:150, fixed: 'center'}
                 ,{field: 'teacher', title: '教练', width:150, fixed: 'center'}
                 ,{field: 'stuNumber', title: '招生数', width:150, fixed: 'center'}
@@ -310,6 +326,9 @@
                 var data =  val.field;
                 var experienceId = data.experienceId;
                 data.age = data.age_min +"-"+data.age_max;
+                debugger;
+                alert(layedit.getContext(textarea_index))
+                data.descrite = layedit.getContext(textarea_index);
                 var url = experienceId==''?'/experi/add':'/experi/update';
                 $.ajax({
                     url:url,
@@ -349,9 +368,10 @@
                         });
                     });
                     layui.use('layedit', function(){
-                        var layedit = layui.layedit;
-                        layedit.build('form_descrite');
-                        layedit.build('form_descrite',{
+                        layedit = layui.layedit;
+                        // layedit.build('form_descrite');
+                        debugger;
+                        textarea_index = layedit.build('form_descrite',{
                             uploadImage:  {url: '/classimg/upload', type: 'post'},
                         });
                     });
@@ -540,7 +560,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">课程详情</label>
             <div class="layui-input-block">
-                <textarea name="descrite" id="form_descrite" placeholder="请输入课程详情" class="layui-textarea"></textarea>
+                <textarea id="form_descrite" name="descrite" class="layui-textarea" lay-verify="content"></textarea>
             </div>
         </div>
 

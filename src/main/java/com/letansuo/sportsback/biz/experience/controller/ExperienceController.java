@@ -35,11 +35,6 @@ public class ExperienceController
   }
   @PostMapping({"/add"})
   public ResultVo add(@RequestBody Experience experience) {
-    experience.setOperatorId(0);
-    experience.setPriceFlag(1);
-    experience.setStatus(0);
-    experience.setClubId(5);
-    experience.setTypeId(1);
     this.service.insert(experience);
     return ResultVo.success();
   }

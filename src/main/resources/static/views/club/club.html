@@ -26,6 +26,10 @@
 
 <script src="../../layui/layui.js"></script>
 
+<script type="text/html" id="index_temp">
+    {{d.LAY_TABLE_INDEX+1}}
+</script>
+
 <script type="text/html" id="toolbar">
     <div class="layui-btn-container">
         <button class="layui-btn layui-btn-sm" lay-event="detail">详情</button>
@@ -62,7 +66,7 @@
                 limitName: 'pageSize' //每页数据量的参数名，默认：limitindex
             }
             ,cols: [[ //表头
-                {field: '', title: '序号', width:80, sort: true, fixed: 'center'}
+                 {type: 'numbers', title: '序号', width:80, sort: true, fixed: 'center',templet: '#index_temp'}
                 ,{field: 'clubname', title: '俱乐部名', width:200, fixed: 'left'}
                 ,{field: 'name', title: '简称', width:100, fixed: 'left'}
                 ,{field: 'clubicon', title: 'logo', width:80, fixed: 'center'}
